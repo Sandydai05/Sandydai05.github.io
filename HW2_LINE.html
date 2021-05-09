@@ -11,466 +11,7 @@
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>LINE｜始終陪伴在你身旁。</title>
     <link rel="stylesheet" href="reset.css">
-    <style>
-        * {
-            font-family: LINESeed, sans-serif;
-            text-decoration: none;
-            font-family: 微軟正黑體;
-        }
-
-        .container {
-            display: flex;
-            width: 1280px;
-            height: 80px;
-            align-items: center;
-            background-color: white;
-            opacity: .9;
-            position: fixed;
-            z-index: 2;
-        }
-
-        .logo {
-            display: inline-block;
-            Flex-grow: .5;
-            justify-content: flex-end;
-            padding-left: 30px;
-        }
-
-        nav {
-            Flex-grow: 6;
-            text-align: center;
-            font-family: LINESeed, sans-serif;
-        }
-
-        nav a {
-            margin: 10px 30px;
-            font-size: 17px;
-            font-weight: bold;
-            color: black;
-        }
-
-        nav a:hover {
-            border-bottom: 3px solid black;
-        }
-
-        .dropdown {
-            font-size: 15px;
-            Flex-grow: .5;
-            font-family: LINESeed, sans-serif;
-            align-content: flex-end;
-            justify-content: flex-end;
-            font-weight: bold;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            border: .5px solid black;
-        }
-
-        .dropdown-content p {
-            padding: 8px 15px;
-            text-align: center;
-            color: black;
-        }
-
-        .dropdown-content p a,
-        .dropdown a {
-            color: black;
-        }
-
-        .dropdown a:hover {
-            border-bottom: 3px solid black;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .banner {
-            display: flex;
-            height: 600px;
-            background-image: url("https://bn1304files.storage.live.com/y4pdkMi9dwuDF0l5vjRUaOJPUHe9mt-8AJtwB42BProRyzRd8zbZHsFR7ty7YnyeT80yXrM-AfbXmzz6wDAcgDaTEOS4NDkUcAztf1CPObq45fqEszeyqTK98LRPWih3baYI4MoPp8fKpZS9FVlwUIk5AwThMQHW_N-rsgSilU1bChiML7-liknRTbeaySugKBmb6_KIHAVcZYELFCEV6PKTp9oMwX7ap4PD6YC6qXzCn0/mv01.jpg?psid=1&width=1435&height=807");
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .banner p {
-            margin: 0 0 30px 150px;
-            font-size: 50px;
-            font-family: LINESeed, sans-serif;
-            color: white;
-        }
-
-        .banner p:first-child {
-            font-size: 150px;
-            font-weight: bold;
-        }
-
-        .introduce p {
-            text-align: center;
-            line-height: 2;
-            font-size: 20px;
-            color: #616161;
-            font-family: LINESeed, SFPro, Arial, Noto Sans JP, Noto Sans KR, sans-serif;
-            font-weight: 400;
-            margin-bottom: 110px;
-        }
-
-        .introduce p:first-child {
-            font-size: 70px;
-            font-weight: bold;
-            color: black;
-            margin-bottom: 0;
-        }
-
-        .maincontent {
-            width: 1260px;
-            display: flex;
-            margin: 0px auto;
-            box-sizing: border-box;
-            align-items: flex-end;
-            justify-content: center;
-        }
-
-        .left_text {
-            width: 500px;
-            font-family: LINESeed, SFPro, Arial, Noto Sans JP, Noto Sans KR, sans-serif;
-            line-height: 2;
-            text-align: left;
-            padding: 120px 40px;
-            border-right: .8px dashed black;
-            box-sizing: border-box;
-            direction: column;
-
-        }
-
-        .left_text p {
-            color: #777;
-            line-height: 1.5;
-            font-size: 15px;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
-        .left_text h3 {
-            font-weight: bold;
-            font-size: 40px;
-        }
-
-        .left_text h4 {
-            font-size: 20px;
-            color: #07b53b;
-            font-weight: 700;
-        }
-
-        .right_img {
-            width: 500px;
-        }
-
-        .right_img img {
-            width: 100%;
-            margin-bottom: 110px;
-        }
-
-        .left_img {
-            width: 500px;
-            border-right: 1px dashed black;
-        }
-
-        .left_img img {
-            width: 100%;
-            margin: 142px 0;
-        }
-
-        .right_text {
-            width: 500px;
-            font-family: LINESeed, SFPro, Arial, Noto Sans JP, Noto Sans KR, sans-serif;
-            line-height: 2;
-            text-align: left;
-            padding: 120px 80px;
-            box-sizing: border-box;
-            direction: column;
-            margin-bottom: 20px;
-        }
-
-        .right_text p {
-            color: #777;
-            line-height: 1.5;
-            font-size: 15px;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
-        .right_text h3 {
-            font-weight: bold;
-            font-size: 40px;
-        }
-
-        .right_text h4 {
-            font-size: 20px;
-            color: #07b53b;
-            font-weight: 700;
-        }
-
-        .infbtn a,
-        .infbtn2 a {
-            display: inline-block;
-            color: black;
-            border: 1px solid gray;
-            border-radius: 5px;
-            margin: 5px;
-            padding: 15px 25px;
-        }
-
-        .infbtn a:hover,
-        .infbtn2 a:hover {
-            color: white;
-            background-color: #07b53b;
-        }
-
-        .communication {
-            background-color: #f6f7f8
-        }
-
-        .title {
-            text-align: center;
-            line-height: 2;
-        }
-
-        .title h2 {
-            font-size: 50px;
-            font-weight: bolder;
-
-        }
-
-        .title p {
-            font-size: 20px;
-            font-weight: bold;
-            color: #616161;
-
-        }
-
-        .wrap {
-            display: flex;
-            flex-wrap: wrap;
-            width: 1200px;
-            margin: auto;
-            align-content: center;
-            line-height: 1.8;
-        }
-
-        .commun_item {
-            width: 360px;
-            box-sizing: border-box;
-            margin: 20px;
-            padding-bottom: 10px;
-        }
-
-        .commun_item img {
-            width: 100%;
-            box-sizing: border-box;
-            margin: 5px;
-            padding-bottom: 10px;
-            display: inline-block;
-            margin: 0 auto;
-        }
-
-        .commun_item h3 {
-            text-align: center;
-            font-size: 25px;
-            font-weight: bolder;
-            margin: 0 25px;
-        }
-
-        .commun_item p {
-            /* flex-grow: 1; */
-            text-align: center;
-            font-size: 14px;
-            color: #616161;
-            font-weight: bold;
-            margin: 0 25px;
-        }
-
-        .corsrervice {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin: 100px 0;
-
-        }
-
-        .corsrervice p {
-            position: absolute;
-            z-index: 2;
-            font-size: 50px;
-            font-weight: bolder;
-            color: white;
-        }
-
-        .corsrervice img {
-            width: 1260px;
-            z-index: 1;
-            height: 320px;
-            overflow: hidden;
-        }
-
-        .service_Overview .services {
-            font-size: 60px;
-            font-weight: bolder;
-            font-family: 微軟正黑體;
-            text-align: center;
-            margin-bottom: 40px;
-
-        }
-
-        .service_wrap {
-            width: 1260px;
-            display: flex;
-            flex-wrap: wrap;
-            margin: auto;
-        }
-
-        .ser_wrapR {
-            width: 960px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .ser_wrapR .item {
-            width: 260px;
-            height: 370px;
-            box-sizing: border-box;
-            margin: 20px 30px;
-            padding: 10px 35px;
-            border-bottom: 1px solid rgba(0, 0, 0, .05);
-            -webkit-box-shadow: 3px 3px 5px 5px #eeeeee;
-            -moz-box-shadow: 3px 3px 5px 5px #eeeeee;
-            box-shadow: 3px 3px 5px 5px #eeeeee;
-        }
-
-        .ser_wrapR .item:hover {
-            filter: brightness(35%);
-            background-color: black;
-            transition: 1s;
-        }
-
-        .ser_wrapR .item img {
-            width: 80px;
-            height: 80px;
-            margin-top: 30px;
-        }
-
-        .ser_wrapR .item h2 {
-            font-size: 20px;
-            font-weight: bolder;
-            font-family: 微軟正黑體;
-            line-height: 1.4;
-            margin-top: 10px;
-        }
-
-        .ser_wrapR .item p {
-            line-height: 1.2;
-            font-family: 微軟正黑體;
-            color: #616161;
-            font-weight: bold;
-            font-size: 15px;
-            margin-top: 10px;
-
-        }
-
-        .ser_wrapL {
-            width: 300px;
-            display: flex;
-            flex-wrap: wrap;
-            /* border: brown 1px solid; */
-            box-sizing: border-box;
-            padding-left: 70px;
-            left: 0;
-        }
-
-        .ser_wrapL .productMenu li{
-            margin: 20px 0;
-            font-size: 20px;
-        }
-
-        .productMenu  li button{
-            border-radius: 5px;
-            background-color: transparent;
-            color: #fff;
-            border-radius: 10px; 
-            border: 1px solid rgba(34, 34, 34, .15);
-            border-radius: 50px;
-            color: rgba(30,30,30,.7);
-            font-size: 13px;
-            padding: 8px 15px;
-            font-weight: bolder;
-            
-        }
-
-        .productMenu  li button:hover {
-            color: white;
-            background-color: #07b53b;
-        }
-
-        .footer{
-            width: 1260px;
-        }
-
-        .footer ul,.copy_right ul{
-            display: flex;
-            margin:20px 0 0 50px;
-            font-size: 14px;
-            font-family: 微軟正黑體;
-            font-weight: bolder;
-            align-items: center;
-        }
-
-        .footer li{
-            margin: 0 20px;
-
-        }
-        .footer li a,.copy_right li a{
-            color: black;
-
-        }
-
-        .footer ul li a::after,.copy_right li a::after{
-            content:'';
-            border-right: 1px solid  rgba(197, 216, 216, 0.7);
-            padding-right: 20px;
-        }
-        .footer img{
-            display: inline-block;
-            height: 40px;
-            height: 40px;
-        }
-
-        .copy_right{
-            background-color:#f7f7f7;
-            border-top: 1px solid rgba(197, 216, 216, 0.7);;
-            height: 50px;
-            margin: 30px 0;
-            padding-top: 10px;
-        }
-
-        .copy_right li{
-            margin-right: 20px;
-        }
-
-        .copy_right img{
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            align-items: center;
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="HW2_LINE.css">
 </head>
 
 <body>
@@ -610,37 +151,37 @@
         </div>
         <div class="wrap">
             <div class="commun_item"><img
-                    src="https://bn1304files.storage.live.com/y4pSUMuO0pscsbf3mVEcM5lzHn4n-IBRKfulCdBAENlr1hsIgtc5ql-Qf-JtR3OVFqKsGPLI_5b64hWnwsrIaj3pJnhbRHfiI-XQedvB3SWLTtBxH53v-MlDR4N7hMxyOFYPHpCDsJzi431wA2NlXK-anzxDNpkwj4mZFYobD2UM0Ix--Bo0cHYcOKGdLy6KgTPwnYlYh1RekbvTRpKtLpaw9Jq04pa1CQEIFDbKq-EjDU/0d067133c3c06f520074aca8e2175ba0.png?psid=1&width=720&height=540"
+                    src="https://line.me/static/fbbe196ede7521a82def4d3d48f7e502/8309f/0d067133c3c06f520074aca8e2175ba0.png"
                     alt="">
                 <h3>聊天、語音通話&視訊通話</h3>
                 <p>能夠和好友一對一或多人群組訊息聊天，或是進行語音、視訊通話。</p>
             </div>
             <div class="commun_item"><img
-                    src="https://bn1304files.storage.live.com/y4pRxcIiEwHXTIGEBKvlIwOajv5Z0ywLuTgct0rNiHVkwJZYoVE7daudn-cOPgVOiSadKDEsLE4VPWebSu2QI3TqsWbh4JLHnOb1CAmpavCnZJR4f0Vff3iqXaj9khNrUR3wW1eKcDEjFwp7poUPY--NaVbgug5y1AOsIO0Qt2Hvm2TWDeNhX6fSSRQZ5YgRX_v3zNipNFVHqv_5nT4KbVTyiXwbX6GCxE16PDzsTcr21Q/3ba4e4f273cbc6faf25705a9154d0ce6.png?psid=1&width=720&height=540"
+                    src="https://line.me/static/48cd9745c3bae4922389077081d9eef3/8309f/3ba4e4f273cbc6faf25705a9154d0ce6.png"
                     alt="">
                 <h3>貼圖＆表情貼＆主題</h3>
                 <p>使用有趣的貼圖或表情貼豐富聊天，也能更換超讚的主題來表達自己。</p>
             </div>
             <div class="commun_item"><img
-                    src="https://bn1304files.storage.live.com/y4p5mmzS0zMH4m9Xz2i99SS_J7a1KmpDzDUKKg1cAsgyYyHhun2yD73pJdm1qHIS3c_CXCRxUzUbIlKopDJwOqWM_PkiDfjkzez8laKRBBx8pPLvv9Pg6ysxtdMGqT_K9e2m5UTQTe2BAfxrKOFIqyXv1M8qg1BpS6Xqiqlp1842X177uNV10qdySySO8MjHQ07ndqhzX2S_1Qn9k5JuP91TcI_NaPZ-C_fBOHMrzbBS1I/d9d770c0876cab6a56cdc4d308abba67.png?psid=1&width=720&height=540"
+                    src="https://line.me/static/933f03866f7418343c0fe505af85ed1c/8309f/d9d770c0876cab6a56cdc4d308abba67.png"
                     alt="">
                 <h3>主頁</h3>
                 <p>可以快速連結 LINE 的各種服務，包含貼圖等多樣的內容資訊。</p>
             </div>
             <div class="commun_item"><img
-                    src="https://bn1304files.storage.live.com/y4pOS2jw-unD-GV3jeCkpByzRu0zGJ3yxHhp582sl64SLCIyDUzVKw-2H3-poPBiFk6OYkuOReDEx3oR_-q7nr2QjSueScjEfNn5P1PeLSJBSqz8ZmiQXX5AJ5gj8xfYlN-z_BikDmcML7mL9HpXAHmDYogdstSOb98w1KR397JePCjou3GY08mz0v28CjmpFY_Lkrmn8Z1dAEDJuwqF2785IyWKrfc--NmJRMkniW6kfo/49fae47e154a66bfea7bfa3559e04483.png?psid=1&width=720&height=540"
+                    src="https://line.me/static/a2ea225d0212a1cd6db236cadd59e016/8309f/49fae47e154a66bfea7bfa3559e04483.png"
                     alt="">
                 <h3>社群</h3>
                 <p>輕鬆分享共同興趣、開心聊出好麻吉。</p>
             </div>
             <div class="commun_item"><img
-                    src="https://bn1304files.storage.live.com/y4p3SCmWZrUFy-0vSewS3KtYThBMdulBrbg01MhkzOqC779RpVikAz_SzoCB6xG2kvJ1lz3JvWc8yBL8d_xxWdjaRPHPdZVBv-gHU1T931L6lRM87YcVpJTNXZUEDHBrK43aErn9W1lxJIf533hUZJKwJeSBzIHSK-WuFocfa3KGCb29Nzj3TkpIkyJEArEMYTMEJ3hGhqerR_4p0HRZ6Eu26WDBe6G8AY3onEiePSle_s/e8184ef3c8da9a8eec9cbd127f709a96.png?psid=1&width=720&height=540"
+                    src="https://line.me/static/af6fe8fe8c90155d612e89f87a6c02bc/8309f/e8184ef3c8da9a8eec9cbd127f709a96.png"
                     alt="">
                 <h3>貼文串</h3>
                 <p>供你分享你的近況，或是瞭解好友的最新消息。透過「探索」功能，能找到更多你喜愛的內容。</p>
             </div>
             <div class="commun_item"><img
-                    src="https://bn1304files.storage.live.com/y4pSi2HlG00FOTBnNZF2rzIIDtuBSyHBhMRj80iyNskPiKDOsRFup_vFLSgsk1WfASyHDGiX24tPeOI-wiETXP1QzdkaSggtnfF1zDFnzjld-eNeyM8QAmcbfhz231Ijo1Fyoc992z9rrSsyO87vWfCrSZLh1X5iwCUzt8ibgmgLwN5oMrNB-hZpJxFlgiExIRoJCTFR8870VKlRE_WuqaujiLP7cI6QBgT-hrB7YJPAkM/e3ba9b4f333191f18c8d467bb6e2b46f.png?psid=1&width=720&height=540"
+                    src="https://line.me/static/9962ce7e72d4ba5721ee5bcab68d73b7/8309f/e3ba9b4f333191f18c8d467bb6e2b46f.png"
                     alt="">
                 <h3>錢包</h3>
                 <p>使用「 LINE Pay 」可以進行安全方便的行動付款或轉帳，也能使用其他金融相關服務。</p>
@@ -1008,8 +549,8 @@
             <li><a href="#">隱私權政策</a></li>
             <li><a href="#">註冊及移動帳號</a></li>
             <li><a href="#">Family sites</a></li>
-            <li><a href="#"><img src="https://bn1304files.storage.live.com/y4pcfkYb6UUFc7plLwAPxkYkhIVRxy36kKenbJzeUagBnXady59ZbOrXm9LHFsdvF9unljW3Ozzackt0j7rf1qMwVy5nIuVtZK6YqM8GV0UGqqLIXjEI6_OXtfZ1rLQ5BROHMLpfxjmjUCM0w_ZPvGl4JaHDfz75KCw8KMA6y6UqqyG24GbqYA5ZGlEBKA6J2_LLQ6yC2qy0nwaDE6fSRwL0RjWMpTBB_I1_b5eZkH5oGk/icon-sns-y.png?psid=1&width=30&height=22" alt=""></a></li>
-            <li><a href="#"><img src="https://bn1304files.storage.live.com/y4pl9OOvNJ6hg-XsIjGg3n3dRkzeEvzsG6lFjelJT56f3twajkW-_GkvmeoenjDjG9E3zYw-X16AciplJIDRjRxi1M3gcqf2n1_IYIWyBp_VoGNDyLWFq0VW-ol5UyHiY9POIRc5BRWD-uGrKJ-uI819PFUY9lxI954VSk9bAzJrJeMIlrr3qGSp1IKFY0QjMNmH05ZMGANicvrs2cC2GKYq_nBPu88jVP4Cxml8Xt60qQ/icon-sns-f.png?psid=1&width=22&height=22&cropMode=center" alt=""></a></li>
+            <li><a href="#" class="icon"><img src="https://line.me/static/23b35bc9738f41d33f8d45fb8fabcb0a/88206/icon-sns-y.png" alt=""></a></li>
+            <li><a href="#" class="icon"><img src="https://bn1304files.storage.live.com/y4pl9OOvNJ6hg-XsIjGg3n3dRkzeEvzsG6lFjelJT56f3twajkW-_GkvmeoenjDjG9E3zYw-X16AciplJIDRjRxi1M3gcqf2n1_IYIWyBp_VoGNDyLWFq0VW-ol5UyHiY9POIRc5BRWD-uGrKJ-uI819PFUY9lxI954VSk9bAzJrJeMIlrr3qGSp1IKFY0QjMNmH05ZMGANicvrs2cC2GKYq_nBPu88jVP4Cxml8Xt60qQ/icon-sns-f.png?psid=1&width=22&height=22&cropMode=center" alt=""></a></li>
         </ul>
     </div>
 
