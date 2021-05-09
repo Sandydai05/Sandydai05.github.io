@@ -378,6 +378,12 @@ nav a:hover {
     padding-left: 70px;
 }
 
+.ser_wrapL .productMenu{
+    position: sticky;
+    top: 180px;
+
+}
+
 .ser_wrapL .productMenu li{
     margin: 20px 0;
     font-size: 20px;
