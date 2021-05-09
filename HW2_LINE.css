@@ -6,7 +6,7 @@
 
 .container {
     display: flex;
-    width: 1280px;
+    width: 100%;
     height: 80px;
     align-items: center;
     background-color: white;
@@ -79,7 +79,7 @@ nav a:hover {
 .banner {
     display: flex;
     height: 600px;
-    background-image: url("https://bn1304files.storage.live.com/y4pdkMi9dwuDF0l5vjRUaOJPUHe9mt-8AJtwB42BProRyzRd8zbZHsFR7ty7YnyeT80yXrM-AfbXmzz6wDAcgDaTEOS4NDkUcAztf1CPObq45fqEszeyqTK98LRPWih3baYI4MoPp8fKpZS9FVlwUIk5AwThMQHW_N-rsgSilU1bChiML7-liknRTbeaySugKBmb6_KIHAVcZYELFCEV6PKTp9oMwX7ap4PD6YC6qXzCn0/mv01.jpg?psid=1&width=1435&height=807");
+    background-image: url("https://github.com/Sandydai05/Sandydai05.github.io/blob/main/line%20img/mv01.jpg?raw=true");
     flex-direction: column;
     justify-content: center;
 }
@@ -404,7 +404,7 @@ nav a:hover {
 }
 
 .footer{
-    width: 1260px;
+    width: 100%;
 }
 
 .footer ul,.copy_right ul{
