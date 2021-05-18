@@ -44,6 +44,7 @@
     position:relative; */
 }
 
+
 .container_odd{
     width: 960px;
     height: 800px;
@@ -86,14 +87,12 @@
 
 .evaluation{
     width: 360px;
-    height: 340px;
     display: flex;
     flex-direction: column;
 
 }
 .evaluation_rev{
     width: 360px;
-    height: 340px;
     display: flex;
     flex-direction: column;
     margin-left: 600px;
@@ -183,13 +182,13 @@
     right: 0;
 }
 .feature p,.feature_rev p{
-    font-size: 20px;
+    font-size: 18px;
     color: #c73a3a;
     font-weight: bolder;
     margin: 15px;
 }
 .feature p::after,.feature_rev p::after{
-    content: '——————————————————————';
+    content: '–––––––––––––––––––––––––––––––––––––––––––––––––––—';
     margin-top: 15px;
 }
 .ytlogo{
