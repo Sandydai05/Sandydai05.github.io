@@ -141,13 +141,20 @@ nav a:hover {
         display: block;
         text-align: center;
         margin: 30px 0;
-
+        /* position: sticky;
+        top: 300px; */
+        background-color: white;
+        opacity: .8;
+        height: 60px;
     }
     .nav a {
-        margin: 0px 20px;
+        /* margin: auto 20px; */
+        display: inline-block;
         font-size: 20px;
         font-weight: bold;
         color: black;
+        margin: auto;
+        padding: 20px;
     }
 
 }
@@ -265,12 +272,12 @@ nav a:hover {
     }
     .right_text {
         width: 100%;
-        padding: 0px 0px 0px 50px;
+        padding: 0px 20px 0px 20px;
     }
     .left_text {
         width: 100%;
         border-right: none;
-        padding: 0px 0px 0px 50px;
+        padding: 0px 20px 0px 20px;
 
     }
     .right_img {
