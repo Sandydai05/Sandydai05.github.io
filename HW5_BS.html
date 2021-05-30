@@ -8,32 +8,264 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png"
-        href="https://line.me/static/c5bc5abac963fd619ec6d22240641a90/621c6/icon-line.png">
+        href="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_1e714a102af34089a58b0544cc0ca35d_mv2.jpg?raw=true">
 
     <title>Build School - 軟體人才培訓 軟體工程師培訓 程式教育訓練|打造更有競爭力的職涯</title>
+    <style>
+        *{
+            font-family: 微軟正黑體;
+        }
+        .header {
+            position: relative;
+        }
+
+        .custom_nav {
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .bs_fakeelement::after {
+            content: "developer career builder";
+            font-size: 12px;
+            display: inline-block;
+            display: flex;
+            width: 400px;
+            height: 20px;
+            position: absolute;
+            top: 70%;
+            left: 19.5%;
+            z-index: 12;
+        }
+
+        @media (max-width: 1199.98px) {
+            .bs_fakeelement::after {
+                display: none;
+            }
+        }
+
+        .carousel .carousel-indicators button {
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            margin: 0 5px;
+        }
+
+        .carousel {
+            height: 700px;
+        }
+
+        .carousel-item {
+            height: 700px;
+
+        }
+
+        .carousel-item img {
+            width: 100%;
+            object-fit: contain;
+            object-position:center center;
+        }
+        .btn-color{
+            background-color: #3D98E999;
+            color: cornsilk;
+            font-size: 16px;
+            margin: 0 35px;
+            border-radius: 0;
+
+        }
+        .carousel-item h2{
+            color: white;
+            /* margin-bottom: 150px; */
+            font-size: 50px;
+            font-weight: bolder;
+        }
+        .description{
+            margin-bottom: 180px;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .hasbg{
+            background-color:#3D98E999 ;
+            display: inline-block;
+            padding: 5px 18px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="header">
+        <nav class="custom_nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <!-- <a class="navbar-brand ms-auto" href="#">Navbar</a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Features</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link active text-light fs-3 me-3 bs_fakeelement" aria-current="page" href="#"><img
+                                src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_1e714a102af34089a58b0544cc0ca35d_mv2.jpg?raw=true"
+                                class="me-3" alt="">Build School</a>
+                        <a class="nav-link active text-light mt-3" aria-current="page" href="#">台北班簡介</a>
+                        <a class="nav-link text-light mt-3" href="#">新竹班簡介</a>
+                        <a class="nav-link text-light mt-3" href="#">校友會-台灣青築未來協會</a>
+                        <a class="nav-link text-light mt-3" href="#">Build the Future</a>
+                        <a class="nav-link text-light mt-3" href="#">Blog</a>
+                        <a class="nav-link text-light mt-3" href="#">歷屆老師</a>
+                        <a class="nav-link text-light mt-3" href="#">問題洽詢</a>
                     </div>
                 </div>
             </div>
         </nav>
-    </header>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                    aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
+                    aria-label="Slide 8"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/11062b_482865fdd2424d17828b72e1e1db16f7f000.jpg?raw=true"
+                        class="d-block w-100" alt="1 slide">
+                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                        <h2>軟體工程師的路上<br>有人帶</h2>
+                        <p class="description">STATR CODING AND GET COACHED FROM MENTORS</p>
+                        <p>
+                            <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/11062b_482865fdd2424d17828b72e1e1db16f7f000.jpg?raw=true"
+                        class="d-block w-100" alt="2 slide">
+                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                        <h2>大量的程式練習<br>才能積累經驗</h2>
+                        <p class="description">PRACTICE MAKES PERFECT</p>
+                        <p>
+                            <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/11062b_482865fdd2424d17828b72e1e1db16f7f000.jpg?raw=true"
+                        class="d-block w-100" alt="3 slide">
+                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                        <h2>想搭上火箭?<br>門票是給想成為軟體工程師的你</h2>
+                        <p class="description hasbg">BUILD SCHOOL-DEVELOPER CAREER BUILDER</p>
+                        <p>
+                            <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_15ddb32642bb45c29d4455f566cb4047_mv2_d_3264_2448_s_4_2.jpg?raw=true"
+                        class="d-block w-100" alt="4 slide">
+                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                        <h2 class="hasbg">動手做出東西<br>才能解決問題</h2>
+                        <p class="description">BUILD SOMETHING AND SOLIVE THE PROBLEM, <br>THAT'S MY STYLE</p>
+                        <p>
+                            <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_e1e737197e9744cd8c7ea8b8a65d0f67_mv2.jpg?raw=true"
+                        class="d-block w-100" alt="5 slide">
+                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                        <h2 class="hasbg">這裡沒有考試<br>只有滿滿的程式碼</h2>
+                        <p class="description">NO TEST BUT YOUR CODES</p>
+                        <p>
+                            <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_3726256a5da840e8b1df0e988639bc67_mv2_d_2800_1573_s_2.jpg?raw=true"
+                        class="d-block w-100" alt="6 slide">
+                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                        <h2>BUILD SCHOOL</h2>
+                        <p class="description">Build School是軟體開發教育的先鋒 為您打造更有競爭力的職涯</p>
+                        <p>
+                            <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_08f86cfb9419470fba577b0807ee1b20_mv2_d_1920_1442_s_2.jpg?raw=true"
+                        class="d-block w-100" alt="7 slide">
+                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                        <h2>前往峰頂的路上<br>有人帶</h2>
+                        <p class="description hasbg">START CODING AND GET COACHED FROM MENTORS</p>
+                        <p>
+                            <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_07310aa55e4a4c869120a07bb375edf8_mv2_d_2500_1667_s_2.jpg?raw=true"
+                        class="d-block w-100" alt="8 slide">
+                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                        <h2>BUILD SCHOOL</h2>
+                        <p class="description">Build School is a pioneer of software developer<br>education and career builder for engineers</p>
+                        <p>
+                            <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
+                            <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="https://picsum.photos/500/300/?random=1" class="img-fluid">
+                    <h3></h3>
+                    <h3></h3>
+                </div>
+                <div class="col-12 col-md-6"></div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
