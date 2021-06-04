@@ -1,0 +1,293 @@
+.header {
+    position: relative;
+}
+
+.custom_nav {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.nav-item a{
+    font-size: 16px;
+}
+
+.bslogo{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.bslogo::after{
+    content: "developer career builder";
+    font-size: 12px;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .bslogo::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    nav {
+    position:relative;
+    z-index: 1;
+    background-color:white;
+    }
+    .bslogo{
+        color:black !important ;
+        margin-left: 0px !important;
+    }
+    .nav-link{
+    color:black !important ;
+    }
+}
+
+.carousel {
+    position: relative;
+}
+.carousel .carousel-indicators button {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    margin: 0 8px;
+}
+.carousel .carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 40rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.btn-color {
+    background-color: #3D98E999;
+    color: cornsilk;
+    font-size: 16px;
+    margin: 0 20px;
+    border-radius: 0;
+
+}
+
+.carousel .carousel-item .carousel-caption {
+    position: absolute;
+    top: 20%;
+    /* z-index: 999; */
+    /* background-color: rgba(0, 0, 0, 0.25); */
+    /* -webkit-backdrop-filter: blur(20px);s
+            backdrop-filter: blur(20px); */
+    border-radius: 5px;
+    /* height: 12rem; */
+}
+
+@media screen and (max-width: 768px) {
+    .carousel .carousel-item .carousel-caption {
+        display: block !important;
+    }
+    .carousel-item h2 {
+        font-size: 35px !important;
+    }
+}
+
+.carousel-item h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.description {
+    margin-bottom: 12%;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+.btnfunction a{
+    display: block;
+    margin: .5rem auto;
+    width: 200px;
+
+    }
+}
+
+.hasbg {
+    background-color: #3D98E999;
+    display: inline-block;
+    padding: 5px 18px;
+}
+
+.row p {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+    text-align: left;
+}
+
+.division {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    margin: 40px 0;
+    background-image: url(https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5b7e139d046c40c1a1acde7162607721.jpg?raw=true);
+}
+
+.division::after {
+    content: "";
+    background-color: rgb(4, 81, 132, .8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.division h3 {
+    position: relative;
+    color: white;
+    font-weight: bolder;
+    z-index: 3;
+    margin-top: 10px;
+}
+
+.card {
+    border: none;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.card span {
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px 0;
+}
+
+.card h4 {
+    font-size: 18px;
+    color: #F50038;
+    font-weight: bolder;
+}
+
+.card li {
+    font-size: 15px;
+    color: black;
+}
+@media screen and (max-width: 768px) {
+    .card{
+        margin-top: 20px;
+    }
+    .card ul{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        list-style:none;
+    }
+    .main{
+        margin-top: 30px;
+    }
+}
+.imgdouble{
+    width: 150px !important;
+    height: 60px !important;
+}
+.widthimg{
+    width: 180px !important;
+    height: 60px !important;
+}
+.midimg{
+    width: 120px !important;
+    height: 70px !important;
+}
+.smallimg{
+    width: 60px !important;
+    height: 80px !important;
+}
+.catimg{
+    width: 100px !important;
+    height: 80px !important;
+}
+
+.comepanylogo img{
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .comepanylogo img{
+        margin-top: 20px;
+    }
+}
+
+.footer::before{
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 5px;
+    background-color: #605e5e;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color:#f2f2f2;
+}
+
+
+.cooperation h4{
+    text-align: left;
+    margin-left: 150px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 微軟正黑體;
+
+}
+.cooperation p{
+    margin:0 200px 30px 150px;
+    font-size: 16px;
+    color: black;
+    font-family: 微軟正黑體;
+    width: 30%;
+}
+.companyInf span,
+.companyInf a{
+    display:block;
+    margin-left: 150px;
+    margin-right: 200px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+.socialMediaLogo{
+    display: flex;
+    margin: 30px 200px 10px 150px;
+}
+.socialMediaLogo a{
+    color: black;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.socialMediaLogo .copyright{
+    margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+    .socialMediaLogo{
+        flex-direction: column;
+    }
+    .socialMediaLogo .copyright{
+        margin-left: 0;
+    }
+    .socialMediaLogo a{
+        margin-bottom: 15px;
+    }
+}

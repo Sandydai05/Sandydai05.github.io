@@ -9,145 +9,48 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png"
         href="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_1e714a102af34089a58b0544cc0ca35d_mv2.jpg?raw=true">
+    <link rel="stylesheet" href="HW5_BS.css">
 
     <title>Build School - 軟體人才培訓 軟體工程師培訓 程式教育訓練|打造更有競爭力的職涯</title>
-    <style>
 
-        .header {
-            position: relative;
-        }
-
-        .custom_nav {
-            position: absolute;
-            width: 100%;
-            z-index: 10;
-        }
-
-        .bs_fakeelement::after {
-            content: "developer career builder";
-            font-size: 12px;
-            display: inline-block;
-            display: flex;
-            width: 400px;
-            height: 20px;
-            position: absolute;
-            top: 70%;
-            left: 19.5%;
-            z-index: 12;
-        }
-
-        @media (max-width: 1200px) {
-            .bs_fakeelement::after {
-                display: none;
-            }
-        }
-
-        .carousel .carousel-indicators button {
-            width: 5px;
-            height: 5px;
-            border-radius: 100%;
-            margin: 0 5px;
-        }
-
-        .carousel,
-        .carousel-item {
-            height: 700px;
-        }
-
-        .carousel-item img {
-            width: 100%;
-        }
-
-        .btn-color {
-            background-color: #3D98E999;
-            color: cornsilk;
-            font-size: 16px;
-            margin: 0 35px;
-            border-radius: 0;
-
-        }
-
-        .carousel-item h2 {
-            color: white;
-            font-size: 50px;
-            font-weight: bolder;
-        }
-
-        .description {
-            margin-bottom: 180px;
-            color: white;
-            font-weight: bold;
-            font-size: 15px;
-        }
-
-        .hasbg {
-            background-color: #3D98E999;
-            display: inline-block;
-            padding: 5px 18px;
-        }
-
-        .row p {
-            width: 80%;
-            justify-content: center;
-            align-items: center;
-            margin-left: 60px;
-            text-align: left;
-        }
-
-        .division {
-            position: relative;
-            text-align: center;
-            padding: 40px;
-            margin: 20px 0;
-            background-image: url(https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5b7e139d046c40c1a1acde7162607721.jpg?raw=true);
-        }
-
-        .division::after {
-            content: "";
-            background-color: rgb(4, 81, 132,.8);
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-        }
-
-        .division h3 {
-            position: relative;
-            color: white;
-            font-weight: bolder;
-            z-index: 3;
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <div class="header">
         <nav class="custom_nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <a class="navbar-brand ms-5 text-light bslogo" href="#"><img
+                        src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_1e714a102af34089a58b0544cc0ca35d_mv2.jpg?raw=true"
+                        alt="logo" class="me-3">Build School</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav mx-auto">
-                        <a class="nav-link active text-light fs-3 me-3 bs_fakeelement" aria-current="page" href="#"><img
-                                src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_1e714a102af34089a58b0544cc0ca35d_mv2.jpg?raw=true"
-                                class="me-3" alt="">Build School</a>
-                        <a class="nav-link active text-light mt-3" aria-current="page" href="#">台北班簡介</a>
-                        <a class="nav-link text-light mt-3" href="#">新竹班簡介</a>
-                        <a class="nav-link text-light mt-3" href="#">校友會-台灣青築未來協會</a>
-                        <a class="nav-link text-light mt-3" href="#">Build the Future</a>
-                        <a class="nav-link text-light mt-3" href="#">Blog</a>
-                        <a class="nav-link text-light mt-3" href="#">歷屆老師</a>
-                        <a class="nav-link text-light mt-3" href="#">問題洽詢</a>
-                    </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" aria-current="page" href="#">台北班簡介</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">校友會-台灣青築未來協會</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Build the Future</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">歷屆老師</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">問題洽詢</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
+        <!-- carousel -->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -169,12 +72,11 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/11062b_482865fdd2424d17828b72e1e1db16f7f000.jpg?raw=true"
-                        class="d-block w-100" alt="1 slide">
-                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/carousel-1.jpg?raw=true" class="d-block w-100" alt="1 slide">
+                    <div class="carousel-caption d-none d-md-block">
                         <h2>軟體工程師的路上<br>有人帶</h2>
                         <p class="description">STATR CODING AND GET COACHED FROM MENTORS</p>
-                        <p>
+                        <p class="btnfunction">
                             <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
@@ -182,12 +84,12 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/11062b_482865fdd2424d17828b72e1e1db16f7f000.jpg?raw=true"
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/carousel-2.jpg?raw=true"
                         class="d-block w-100" alt="2 slide">
-                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                    <div class="carousel-caption">
                         <h2>大量的程式練習<br>才能積累經驗</h2>
                         <p class="description">PRACTICE MAKES PERFECT</p>
-                        <p>
+                        <p class="btnfunction">
                             <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
@@ -195,12 +97,12 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/11062b_482865fdd2424d17828b72e1e1db16f7f000.jpg?raw=true"
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/carousel-3.jpg?raw=true"
                         class="d-block w-100" alt="3 slide">
-                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                    <div class="carousel-caption d-none d-md-block">
                         <h2>想搭上火箭?<br>門票是給想成為軟體工程師的你</h2>
                         <p class="description hasbg">BUILD SCHOOL-DEVELOPER CAREER BUILDER</p>
-                        <p>
+                        <p class="btnfunction">
                             <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
@@ -208,12 +110,12 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_15ddb32642bb45c29d4455f566cb4047_mv2_d_3264_2448_s_4_2.jpg?raw=true"
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/carousel-4.jpg?raw=true"
                         class="d-block w-100" alt="4 slide">
-                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                    <div class="carousel-caption d-none d-md-block">
                         <h2 class="hasbg">動手做出東西<br>才能解決問題</h2>
                         <p class="description">BUILD SOMETHING AND SOLIVE THE PROBLEM, <br>THAT'S MY STYLE</p>
-                        <p>
+                        <p class="btnfunction">
                             <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
@@ -221,12 +123,12 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_e1e737197e9744cd8c7ea8b8a65d0f67_mv2.jpg?raw=true"
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/carousel-5.jpg?raw=true"
                         class="d-block w-100" alt="5 slide">
-                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                    <div class="carousel-caption d-none d-md-block">
                         <h2 class="hasbg">這裡沒有考試<br>只有滿滿的程式碼</h2>
                         <p class="description">NO TEST BUT YOUR CODES</p>
-                        <p>
+                        <p class="btnfunction">
                             <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
@@ -234,12 +136,12 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_3726256a5da840e8b1df0e988639bc67_mv2_d_2800_1573_s_2.jpg?raw=true"
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/carousel-6.jpg?raw=true"
                         class="d-block w-100" alt="6 slide">
-                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                    <div class="carousel-caption d-none d-md-block">
                         <h2>BUILD SCHOOL</h2>
                         <p class="description">Build School是軟體開發教育的先鋒 為您打造更有競爭力的職涯</p>
-                        <p>
+                        <p class="btnfunction">
                             <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
@@ -247,12 +149,12 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_08f86cfb9419470fba577b0807ee1b20_mv2_d_1920_1442_s_2.jpg?raw=true"
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/carousel-7.jpg?raw=true"
                         class="d-block w-100" alt="7 slide">
-                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                    <div class="carousel-caption d-none d-md-block">
                         <h2>前往峰頂的路上<br>有人帶</h2>
                         <p class="description hasbg">START CODING AND GET COACHED FROM MENTORS</p>
-                        <p>
+                        <p class="btnfunction"> 
                             <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
@@ -260,13 +162,13 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_07310aa55e4a4c869120a07bb375edf8_mv2_d_2500_1667_s_2.jpg?raw=true"
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/carousel-8.jpg?raw=true"
                         class="d-block w-100" alt="8 slide">
-                    <div class="carousel-caption d-none d-md-block mb-5 pe-5">
+                    <div class="carousel-caption d-none d-md-block">
                         <h2>BUILD SCHOOL</h2>
                         <p class="description">Build School is a pioneer of software developer<br>education and career
                             builder for engineers</p>
-                        <p>
+                        <p class="btnfunction">
                             <a href="#" class="btn btn-lg btn-color" role="button">台北班簡介及報名(2021/5/3開課)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">新竹班簡介(2021/11月後)</a>
                             <a href="#" class="btn btn-lg btn-color" role="button">招生說明會報名</a>
@@ -288,7 +190,7 @@
     </div>
     <div class="container">
         <div class="row my-5 text-center">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 main">
                 <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/%E6%93%B7%E5%8F%96.JPG?raw=true"
                     class="img-fluid">
                 <h3 class="fw-bold">Build School</h3>
@@ -297,7 +199,7 @@
                 <h4 class="fs-5 text text-start ps-5 mx-5 text-dark">Build = 動手做</h4>
                 <h4 class="fs-5 text text-start ps-5 mx-5 text-dark">Build = 軟體開發職涯的打造者</h4>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 main">
                 <h3 class="fw-bold fs-5">實作及就業導向的軟體開發學校</h3>
                 <p class="px-5 mt-3">因應數位新時代的來臨，軟體、App、IoT
                     、SaaS、雲端平台的應用需求大爆炸，軟體工程師的招募需求持續上升，以2016年5月求職平台的統計資料，從高科技、電商、金融、傳產、網路服務、軟體資訊、新創等各行業，台灣至少有 27,000
@@ -308,12 +210,12 @@
             </div>
         </div>
         <div class="row my-5 text-center flex-md-row-reverse py-5">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 main">
                 <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_2a410e14076f4a7b9326a915b4517bc8_mv2.jpg?raw=true"
                     class="img-fluid">
                 <h3 class="fs-4 text text-dark my-4 fw-bold">動手實作才是真學習</h3>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 main">
                 <h3 class="fw-bold fs-5">打造專案作品的學習方式<br>(Project-based Learning)</h3>
                 <p class="px-5 mt-3">
                     透過身經百戰的實務講師、各大企業的資深軟體工程師或CTO，帶領學員實作一個真正能運作的產品開發，解決真實世界的問題，透過專題過程中的實作，培養解決問題的能力，這裏不只是程式教學或教育訓練，學的不只是技能，而是
@@ -322,12 +224,12 @@
             </div>
         </div>
         <div class="row my-5 text-center py-5">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 main">
                 <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_2ec10b788bc94ab399d5493f29937b4e_mv2.jpg?raw=true"
                     class="img-fluid">
                 <h3 class="fs-4 text text-dark my-4 fw-bold">就業銜接</h3>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 main">
                 <h3 class="fw-bold fs-5">真正企業職場所需技能<br>(Career Readiness)</h3>
                 <p class="px-5 mt-3">除了透過打造專題作品過程，學到了技術及硬技能外，不同於一般的軟體培訓，我們更加入了簡報技巧、履歷及面試準備、以及真正軟體開發的團隊溝通及運作，這些軟實力
                     (Soft-Skill) 的培養，讓學員能提早做好準備，在職場上成為一位專業的軟體工程師!
@@ -335,12 +237,12 @@
             </div>
         </div>
         <div class="row my-5 text-center flex-md-row-reverse">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 main">
                 <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_0f4c475255a540eeafdb78445852d7fe_mv2.jpg?raw=true"
                     class="img-fluid">
                 <h3 class="fs-4 text text-dark my-4 fw-bold">連結及影響力</h3>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 main">
                 <h3 class="fw-bold fs-5">企業導師的連結<br>(Mentor Network)</h3>
                 <p class="px-5 mt-3">每一位在軟體開發上有實務經驗的企業導師，他們是各大企業的主管、資深軟體工程師或 CTO，其人際連結及資源將帶給同學更多更好的就業機會，你將比別人站得更高，看得更遠!
                 </p>
@@ -350,53 +252,214 @@
     <div class="division">
         <h3>18 - 24週的實作及作品開發 - 從訓練、就業、到企業連結</h3>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-3">
-                <span>
-                    第1-4個月
-                </span>
-                <img src="" alt="">
-                <h4>程式基礎教學</h4>
-                <ul>
-                    <li></li>
-                </ul>
+            <div class="col-12 col-md-3 d-block-flex">
+                <div class="card">
+                    <span class="text-center">第 1 - 4 月</span>
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/%E9%9B%BB%E8%85%A6.JPG?raw=true"
+                        class="card-img-top align-self-center mt-2 pt-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">程式基礎教學</h4>
+                        <ul class="my-3 mx-4">
+                            <li>業界實戰講師</li>
+                            <li>企業主管/創業家/CTO 演講</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-3">
-                <span>
-                    第1-4個月
-                </span>
-                <img src="" alt="">
-                <h4>程式基礎教學</h4>
-                <ul>
-                    <li></li>
-                </ul>
+            <div class="col-12 col-md-3 d-block-flex">
+                <div class="card">
+                    <span class="text-center">第 5 - 6 月</span>
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/%E7%87%88%E6%B3%A1%E6%93%B7%E5%8F%96.JPG?raw=true"
+                        class="card-img-top align-self-center mt-2 pt-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">專案及作品導向實作</h4>
+                        <ul class="my-3 mx-4">
+                            <li>Web / App 作品開發 - 企業導師指導</li>
+                            <li>不只是 Demo - 真實可運作成果</li>
+                            <li>團隊開發 - 真實軟體開發團隊的運作及分工 (Agile敏捷, kanban 看板, CI 自動化建置)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-3">
-                <span>
-                    第1-4個月
-                </span>
-                <img src="" alt="">
-                <h4>程式基礎教學</h4>
-                <ul>
-                    <li></li>
-                </ul>
+            <div class="col-12 col-md-3 d-block-flex">
+                <div class="card">
+                    <span class="text-center">第 6 - 7 月</span>
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/%E7%8D%8E%E7%8B%80.JPG?raw=true"
+                        class="card-img-top align-self-center mt-2 pt-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">作品發表</h4>
+                        <ul class="my-3 mx-4">
+                            <li>簡報 Demo 及溝通技巧</li>
+                            <li>作品及程式碼講解</li>
+                            <li>GitHub, CodePen …</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-3">
-                <span>
-                    第1-4個月
-                </span>
-                <img src="" alt="">
-                <h4>程式基礎教學</h4>
-                <ul>
-                    <li></li>
-                </ul>
+            <div class="col-12 col-md-3 d-block-flex">
+                <div class="card">
+                    <span class="text-center">未來及展望</span>
+                    <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/9f34614e8922485da75285918bc07a85.jpg?raw=true"
+                        class="card-img-top align-self-center mt-2 pt-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">就業及企業導師諮詢</h4>
+                        <ul class="my-3 mx-4">
+                            <li>就業媒合或未來職涯諮詢</li>
+                            <li>企業導師 -人際連結及資源</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="division">
+        <h3 class="fs-4">在課程及作品實作中，將採用這些工具 - 熟悉實務上軟體開發團隊的運作、<br>分工及真實專案的流程</h3>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-3 d-block-flex">
+                <div class="card">
+                    <div class="d-flex flex-column">
+                        <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_868f17332f214b9d86734bf26e59940a_mv2.jpg?raw=true"
+                            class="card-img-top imgdouble  align-self-center mb-2" alt="">
+                        <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_c6c8344c1efd4032a1231408aa6b6c37_mv2.jpg?raw=true"
+                            class="card-img-top align-self-center mt-2 catimg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="text-center text-dark mt-3">版本控管及程式碼管理</h4>
+                        <ul class="my-3 mx-4">
+                            <li>學員之練習及作品之程式碼，皆採用主流的 Git 當版本控管，熟悉版控的各種操作及實務專案運用; 課程中公開之練習程式碼，提交至 GitHub 上，其它學員可參考或供講師
+                                Code Review 檢閱，並熟悉 Open Source 生態及工具</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 d-block-flex">
+                <div class="card">
+                    <div class="d-flex flex-column">
+                        <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_58bbd95542dc470f99be85f345893405_mv2.jpg?raw=true"
+                            class="card-img-top midimg align-self-center mb-2 pb-1" alt="">
+                        <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_8a30597f0eaa4e219e8e19ce484061a5_mv2.jpg?raw=true"
+                            class="card-img-top align-self-center mt-3 imgdouble" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="text-center text-dark mt-3">作品開發及團隊管理</h4>
+                        <ul class="my-3 mx-4">
+                            <li>除了使用 GitHub 外，專題開發階段也將使用 Microsoft Azure DevOps Services
+                                進行團隊開發、包括程式碼管理、工作項目追蹤、自動化建置等，熟悉一個軟體開發專案之流程、分工及日常工作。</li>
+                            <li>也可透過目前許多開發團隊常用的專案管理及看板工具 - Trello 進行工作分派、追蹤、或整個班的工作事項管理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 d-block-flex">
+                <div class="card">
+                    <div class="d-flex flex-column">
+                        <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/Microsoft_Azure_Logo_1600.jpg?raw=true"
+                            class="card-img-top imgdouble  align-self-center mb-2" alt="">
+                        <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/AzureSQL.jpg?raw=true"
+                            class="card-img-top align-self-center mt-2 pt-2 smallimg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="text-center text-dark mt-3">雲端平台及服務</h4>
+                        <ul class="my-3 mx-4">
+                            <li>雲端平台的使用已逐漸成為一個成熟軟體開發團隊之基礎，並讓開發、測試、佈署工作更加的便利及自動化。因此學員將使用 Microsoft Azure
+                                當成作品及專案應用系統執行的雲端平台，包括 Azure App Service 建立網站服務、Azure SQL Database 建立資料庫服務</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 d-block-flex">
+                <div class="card">
+                    <div class="d-flex flex-column">
+                        <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/MSTeamsIcon.jpg?raw=true"
+                            class="card-img-top align-self-center mb-4 widthimg " alt="">
+                        <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_87ff2dd25a6343f1bcf7af34735cfb4e_mv2.jpg?raw=true"
+                            class="card-img-top align-self-center pt-2 midimg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="text-center text-dark mt-3">團隊溝通協作及通知</h4>
+                        <ul class="my-3 mx-4">
+                            <li>課程過程中的線上討論、遠端溝通、或技術分享，將可透過 Microsoft Teams 或Slack 工具。另外練習的程式碼提交至 GitHub、或是 Trello
+                                上的工作狀態更新，或是 Azure DevOps 上自動化建置的狀態，皆可發通知至 Microsoft Teams 或
+                                Slack，透過自動化提升工作效率，並熟悉一個軟體開發團隊的協同合作</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="division">
+        <h3 class="fs-4">我們的講師及企業導師擁有在這些公司的工作經歷、擔任主管或資深工程師</h3>
+    </div>
+    <div class="container comepanylogo">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_0bbda05c4d02483f9d645e319748e631_mv2.jpg?raw=true"
+                    class="d-block mx-auto">
+            </div>
+            <div class="col-12 col-md-3">
+                <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_c1c1b501ccb64c0f84ae8db7a9f229b4_mv2.jpg?raw=true"
+                    class="d-block mx-auto">
+            </div>
+            <div class="col-12 col-md-3">
+                <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_f9afe2e676684827afe6f88f08104c70_mv2.jpg?raw=true"
+                    class="d-block mx-auto">
+            </div>
+            <div class="col-12 col-md-3">
+                <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_58a6e0c593db4ad6914edfe24739bfef_mv2.jpg?raw=true"
+                    class="d-block mx-auto">
+            </div>
+        </div>
+        <div class="row pb-4">
+            <div class="col-12 col-md-3">
+                <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_8a669d9249a84f8380642dc28ee6ed0a_mv2.jpg?raw=true"
+                    class="d-block mx-auto">
+            </div>
+            <div class="col-12 col-md-3">
+                <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_119932e7e8094dbb8b79f8b087885b0e_mv2.jpg?raw=true"
+                    class="d-block mx-auto">
+            </div>
+            <div class="col-12 col-md-3">
+                <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_e3b9a4e6927e4ffe828d3ea8788ab30c_mv2.jpg?raw=true"
+                    class="d-block mx-auto">
+            </div>
+            <div class="col-12 col-md-3">
+                <img src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/5a71f2_1f82650c48074d669339af555295f299_mv2.jpg?raw=true"
+                    class="d-block mx-auto">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="cooperation">
+            <h4>合作及接洽</h4>
+            <p>若為企業欲徵才、或非營利組織或公益團體希望參加我們的培訓或公益合作、或成為我們的講師或擔任指導學生的企業導師 (Inspire Mentor)，請與我們連絡</p>
+        </div>
+        <div class="companyInf">
+            <span>Build School​ 青杉人才有限公司 | 青群科技有限公司</span>
+            <span>社團法人台灣青築未來協會 Build the Future <br>(內政部立案 : 台內團字第 1090033261 號)</span>
+            <a href="#">email: contact@build-school.com </a>
+            <span>電話: 02-66057606</span>
+            <span>台北市忠孝東路三段96號11F-1(台北科大對面/忠孝新生站3號出口)</span>
+        </div>
+        <div class="socialMediaLogo">
+            <a href="#"><img
+                    src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/e316f544f9094143b9eac01f1f19e697.jpg?raw=true"
+                    alt="socialMediaLogo"></a>
+            <a href="#"><img
+                    src="https://github.com/Sandydai05/Sandydai05.github.io/blob/main/BuildSchool_IMG/a1b09fe8b7f04378a9fe076748ad4a6a.jpg?raw=true"
+                    alt="socialMediaLogo"></a>
+            <a href="#" class="pt-2">隱私權宣告</a>
+            <span class="copyright">&copy; 2021 by Build School</span>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
+    </script>
 </body>
 
 </html>
