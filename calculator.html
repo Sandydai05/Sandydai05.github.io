@@ -124,9 +124,10 @@
         let operatorBtns = document.getElementsByClassName('calc-btn-operator');
         let h1 = document.querySelector(".h1");
 
-        let updateDS = function (click) {
+        //caleNumBtns function
+        let updatedisplayVal = function (click) {
             let btnText = click.target.innerText;
-            
+
             if (displayVal === '0') {
                 displayVal = '';
             }
@@ -134,6 +135,7 @@
             displayValEle.innerText = displayVal;
         };
 
+        //operatorBtns function
         let performOperation = function (click) {
             let operator = click.target.innerText;
             if (operator === '+') {
@@ -167,16 +169,18 @@
             else if (operator === '=') {
                 evalStrAry.push(displayVal);
                 let result = eval(evalStrAry.join(' '));
-                displayVal = result + '';
+                displayVal = result;
                 displayValEle.innerText = displayVal;
                 evalStrAry = [];
             }
         };
 
+        //every caleNumBtns registered addEventListener
         for (let i = 0; i < caleNumBtns.length; i++) {
-            caleNumBtns[i].addEventListener('click', updateDS);
+            caleNumBtns[i].addEventListener('click', updatedisplayVal);
         }
 
+        //every operatorBtns registered addEventListener
         for (let i = 0; i < operatorBtns.length; i++) {
             operatorBtns[i].addEventListener('click', performOperation);
         }
