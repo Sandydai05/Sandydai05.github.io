@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="row.css"> -->
+    <style>
+        .container {
+            margin-left: calc(50% - 143px);
+            padding-top: 40px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .calc-btn {
+            background: silver;
+            color: black;
+            width: 65px;
+            height: 45px;
+            border: 1px solid gray;
+            text-align: center;
+            cursor: pointer;
+            font-size: 32px;
+            font-size: 100;
+            padding-top: 3px;
+        }
+
+        .calc-btn:hover {
+            opacity: .8;
+        }
+
+        .row {
+            display: table;
+            table-layout: fixed;
+            width: 269px
+        }
+
+        .col {
+            display: table-cell;
+        }
+
+        #calc-zero,
+        #calc-clear {
+            width: 50%;
+        }
+
+        #calc-display-val {
+            height: 60px;
+            width: 243px;
+            color: white;
+            text-align: right;
+            border: 1px solid gray;
+            font-size: 48px;
+            background-color: #383838;
+            overflow: hidden;
+            white-space: normal;
+            padding: 12px;
+        }
+
+        .calc-btn-operator {
+            background-color: orange;
+            color: brown;
+        }
+        .calc-btn-operator:hover{
+            opacity: .8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="calc-parent">
+        <h1 class="h1"></h1>
+        <div class="row">
+            <div class="col" id="calc-display-val">0</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn col" id="calc-clear">AC</div>
+            <div class="calc-btn col" id="calc-backspace">&#8676;</div>
+            <div class="calc-btn calc-btn-operator col" id="calc-divide">&#247;</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn calcNum col" id="calc-seven">7</div>
+            <div class="calc-btn calcNum col" id="calc-eight">8</div>
+            <div class="calc-btn calcNum col" id="calc-nine">9</div>
+            <div class="calc-btn calc-btn-operator col" id="calc-multiply">x</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn calcNum col" id="calc-four">4</div>
+            <div class="calc-btn calcNum col" id="calc-five">5</div>
+            <div class="calc-btn calcNum col" id="calc-six">6</div>
+            <div class="calc-btn calc-btn-operator col" id="calc-minus">-</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn calcNum col" id="calc-one">1</div>
+            <div class="calc-btn calcNum col" id="calc-two">2</div>
+            <div class="calc-btn calcNum col" id="calc-three">3</div>
+            <div class="calc-btn calc-btn-operator col" id="calc-plus">+</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn calcNum col" id="calc-zero">0</div>
+            <div class="calc-btn col" id="calc-decimal">.</div>
+            <div class="calc-btn calc-btn-operator col" id="calc-equals">=</div>
+        </div>
+
+
+    </div>
+
+    <script>
+
+        let decimalBtn = document.getElementById('calc-decimal');
+        let clearBtn = document.getElementById('calc-clear');
+        let backspaceBtn = document.getElementById('calc-backspace');
+        let displayValEle = document.getElementById('calc-display-val');
+
+        let displayVal = '0';
+        let pendingVal;
+        let evalStrAry = [];
+
+        let caleNumBtns = document.getElementsByClassName('calcNum');
+        let operatorBtns = document.getElementsByClassName('calc-btn-operator');
+        let h1 = document.querySelector(".h1");
+
+        //caleNumBtns function
+        let updatedisplayVal = function (click) {
+            let btnText = click.target.innerText;
+
+            if (displayVal === '0') {
+                displayVal = '';
+            }
+            displayVal += btnText;
+            displayValEle.innerText = displayVal;
+        };
+
+        //operatorBtns function
+        let performOperation = function (click) {
+            let operator = click.target.innerText;
+            if (operator === '+') {
+                pendingVal = displayVal;
+                displayValEle.innerHTML = displayVal;
+                displayVal = '0';
+                evalStrAry.push(pendingVal);
+                evalStrAry.push('+');
+            }
+            else if (operator === '-') {
+                pendingVal = displayVal;
+                displayValEle.innerHTML = displayVal;
+                displayVal = '0';
+                evalStrAry.push(pendingVal);
+                evalStrAry.push('-');
+            }
+            else if (operator === 'x') {
+                pendingVal = displayVal;
+                displayValEle.innerHTML = displayVal;
+                displayVal = '0';
+                evalStrAry.push(pendingVal);
+                evalStrAry.push('*');
+            }
+            else if (operator === '÷') {
+                pendingVal = displayVal;
+                displayValEle.innerHTML = displayVal;
+                displayVal = '0';
+                evalStrAry.push(pendingVal);
+                evalStrAry.push('/');
+            }
+            else if (operator === '=') {
+                evalStrAry.push(displayVal);
+                let result = eval(evalStrAry.join(' '));
+                displayVal = result;
+                displayValEle.innerText = displayVal;
+                evalStrAry = [];
+            }
+        };
+
+        //every caleNumBtns registered addEventListener
+        for (let i = 0; i < caleNumBtns.length; i++) {
+            caleNumBtns[i].addEventListener('click', updatedisplayVal);
+        }
+
+        //every operatorBtns registered addEventListener
+        for (let i = 0; i < operatorBtns.length; i++) {
+            operatorBtns[i].addEventListener('click', performOperation);
+        }
+
+        //clearBtn EventTarget.addEventListener
+        clearBtn.addEventListener('click', function () {
+            displayVal = "0";
+            let evalStrAry = [];
+            displayValEle.innerText = displayVal;
+        });
+
+        //backspaceBtn onclick
+        backspaceBtn.onclick = function () {
+            let lengthOfDSV = displayVal.length;
+
+            displayVal = displayVal.slice(0, lengthOfDSV - 1);
+            if (displayVal === '') {
+                displayVal = '0';
+            }
+            displayValEle.innerText = displayVal;
+        }
+
+        //decimalbtn can only be clicked once
+        decimalBtn.addEventListener('click', function () {
+            if (!displayVal.includes('.'))
+                displayVal += '.';
+            displayValEle.innerText = displayVal;
+        })
+    </script>
+</body>
+
+</html>
