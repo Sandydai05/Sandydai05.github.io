@@ -129,17 +129,17 @@
     answer.addEventListener('click', function () {
         let ans = answerNums.join('');
         alert(`Answer is ${ans}`);
-        console.log(typeof (input.value))
+        // console.log(typeof (input.value))
     })
 
     function isRepeat() {
         userguess = Array.from(input.value);
         //userguess = input.value.split('');
 
-        console.log(userguess);
+        // console.log(userguess);
 
         let nary = userguess.sort();
-        console.log(nary);
+        // console.log(nary);
 
         for (let i = 0; i < nary.length - 1; i++) {
 
@@ -151,19 +151,23 @@
         return true;
     };
 
-    function resetmet(){
+    function resetmet() {
         input.value = '';
-        ul.removeChild(ul);
+        ul.innerHTML = '';
+        answerNums = [];
         answer.disabled = true;
         input.disabled = true;
         guess.disabled = true;
+        reset.disabled = true;
+
+        start.disabled = false;
 
     }
 
 
     guess.addEventListener('click', function () {
         let result = isRepeat();
-        console.log(result);
+        // console.log(result);
 
         if (input.value.length != 4) {
             alert('請輸入四位數字');
@@ -200,14 +204,15 @@
             badge.innerText = `${a} A ${b} B`;
             li.appendChild(badge);
             input.value = '';
-            if(a == 4){
-                badge.classList.replace('bg-danger','btn-success')
-                alert('You are right congratlations！')
+            if (a == 4) {
+                badge.classList.replace('bg-danger', 'btn-success')
+                setTimeout(function(){alert("You are right congratlations！")},500);
+                setTimeout(function(){resetmet()},1000);
             }
         }
     });
 
-    reset.addEventListener('click',function(){
+    reset.addEventListener('click', function () {
         resetmet();
     });
 </script>
