@@ -206,7 +206,7 @@
             input.value = '';
             if (a == 4) {
                 badge.classList.replace('bg-danger', 'btn-success')
-                setTimeout(function(){alert("You are right congratlations！")},500);
+                setTimeout(function(){alert(`Congratlations\nCorrect answer is ${answerNums.join('')}`)},500);
                 setTimeout(function(){resetmet()},1000);
             }
         }
