@@ -63,6 +63,7 @@
         const removeone = document.querySelector('.removeone');
         removeone.addEventListener('click',function(){
             container.removeChild(container.lastChild);
+            imgcount --;
 
         });
 
@@ -81,8 +82,8 @@
         //reset
         const reset = document.querySelector(".reset");
         reset.onclick = function (event) {
-            let pokemons = '';
-            container.innerHTML = pokemons;
+            imgcount = 1;
+            container.innerHTML = '';
         }
 
         //timer
@@ -107,8 +108,8 @@
             let pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
             let img = document.createElement('img');
             img.setAttribute('src', pathFile);
-            container.appendChild(img);
             imgcount++;
+            container.appendChild(img);
         }
     </script>
 </body>
