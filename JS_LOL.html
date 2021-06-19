@@ -57,8 +57,10 @@
         <h1>LOL英雄聯盟圖鑑</h1>
     </header>
 
-    <div class="container">
-        <div class="row text-center justify-content-center"></div>
+    <div class="container text-center">
+        <button class="btn btn-dark mt-4 fw-bolder fs-4 loadallbtn">Load All</button>
+        <div class="row text-center justify-content-center">
+        </div>
     </div>
     <template id='cardLol'>
         <div class="card mx-3 my-3" style="width: 18rem;">
@@ -137,8 +139,8 @@
 
             console.log(characterdata);
 
-
-            characterName.forEach(function (item, index) {
+            document.querySelector('.loadallbtn').addEventListener('click',function(){
+                characterName.forEach(function (item, index) {
                 let cloneConetent = card.content.cloneNode(true); //copy
                 cloneConetent.querySelector('h5').innerText = `${index + 1} : ${item} - ${characterdata[index].name}`;
                 cloneConetent.querySelector('p').innerText = `${characterdata[index].blurb}`;
@@ -166,9 +168,7 @@
                 row.append(cloneConetent);
             });
 
-
-
-
+            });           
         }
         xhr.open('GET', url);
         xhr.send();
