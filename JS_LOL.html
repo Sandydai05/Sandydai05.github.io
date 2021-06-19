@@ -154,7 +154,6 @@
                     detailmodal.querySelector('#chrinf').innerHTML = `HP：${characterdata[index].stats.hp} <br>Move Speed：${characterdata[index].stats.movespeed}<br>Armor：${characterdata[index].stats.armor}<br>Spell Block：${characterdata[index].stats.spellblock}<br>AttackRange：${characterdata[index].stats.attackrange}<br>`;
                 };
 
-
                 cloneConetent.querySelector('.video').onclick = function () {
                     let videomodal = document.querySelector('#videoModal')
                     videomodal.querySelector('#iframe').setAttribute('src', 'https://www.youtube.com/embed/-86LXC0c2zw');
@@ -164,10 +163,8 @@
                         videomodal.querySelector('#iframe').removeAttribute('src');
                     };
                 };
-
                 row.append(cloneConetent);
             });
-
             });           
         }
         xhr.open('GET', url);
