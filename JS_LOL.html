@@ -43,10 +43,6 @@
         .card button:hover {
             transform: scale(1.1);
         }
-
-        .bg {
-            background-color: blue !important;
-        }
     </style>
 </head>
 
@@ -136,8 +132,6 @@
             let lolArray = JSON.parse(this.responseText);
             let characterdata = Object.values(lolArray.data); //所有人物資料
             let characterName = Object.keys(lolArray.data); //所有人物英文名稱
-
-            console.log(characterdata);
 
             document.querySelector('.loadallbtn').addEventListener('click',function(){
                 characterName.forEach(function (item, index) {
