@@ -24,24 +24,53 @@
         }
 
         h5 {
-            font-size: 19px;
+            font-size: 15px;
             font-weight: bolder;
             padding: 5px 0;
         }
 
-        .card-text {
-            height: 120px;
+        .card {
             overflow: hidden;
+            background-color: rgb(66, 64, 64);
+        }
+
+        .card-text {
+            height: 140px;
+            overflow: hidden;
+            overflow-y: auto;
+            color: white;
+        }
+
+        .card-text::-webkit-scrollbar {
+            display: none;
         }
 
         .card:hover {
             transition: background-color .5s ease;
             background-color: #d1d0cc;
-            box-shadow: 3px 3px 12px
+            box-shadow: 3px 3px;
+        }
+
+        .card:hover .card-text {
+            color: black;
         }
 
         .card button:hover {
             transform: scale(1.1);
+        }
+
+        .card:hover img {
+            transform: scale(1.2);
+            transition: transform 0.5s;
+        }
+
+        .modal-content{
+            background-color: rgb(87, 82, 82);
+            color: rgb(252, 249, 238);
+        }
+        .modal-body p{
+            color: rgb(252, 249, 238);
+            line-height: 2;
         }
     </style>
 </head>
@@ -62,7 +91,7 @@
         <div class="card mx-3 my-3" style="width: 18rem;">
             <img src="" class="card-img-top" alt="">
             <div class="card-body">
-                <h5 class="card-title bg-dark text-light"></h5>
+                <h5 class="card-title bg-dark text-light mt-1"></h5>
                 <p class="card-text"></p>
                 <button href="#" data-bs-toggle="modal" data-bs-target="#detailModal"
                     class="btn btn-dark me-3 detail">Detail</a>
@@ -78,16 +107,16 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title fs-3" id="exampleModalLabel">Modal title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <img id="lolImage" src="" alt="" class="w-100">
-                    <p id="description" class="text-dark mt-2"></p>
-                    <p id="chrinf" class="text-dark mt-2 fs-5 fw-bolder"></p>
+                    <p id="description" class="mt-2"></p>
+                    <p id="chrinf" class="mt-2 fs-5 fw-bolder text-dark"></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -133,33 +162,33 @@
             let characterdata = Object.values(lolArray.data); //所有人物資料
             let characterName = Object.keys(lolArray.data); //所有人物英文名稱
 
-            document.querySelector('.loadallbtn').addEventListener('click',function(){
+            document.querySelector('.loadallbtn').addEventListener('click', function () {
                 characterName.forEach(function (item, index) {
-                let cloneConetent = card.content.cloneNode(true); //copy
-                cloneConetent.querySelector('h5').innerText = `${index + 1} : ${item} - ${characterdata[index].name}`;
-                cloneConetent.querySelector('p').innerText = `${characterdata[index].blurb}`;
-                cloneConetent.querySelector('img').setAttribute('src', `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item}_0.jpg`)
+                    let cloneConetent = card.content.cloneNode(true); //copy
+                    cloneConetent.querySelector('h5').innerText = `${index + 1} : ${item} - ${characterdata[index].name}`;
+                    cloneConetent.querySelector('p').innerText = `${characterdata[index].blurb}`;
+                    cloneConetent.querySelector('img').setAttribute('src', `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item}_0.jpg`)
 
-                cloneConetent.querySelector('.detail').onclick = function () {
-                    let detailmodal = document.querySelector('#detailModal')
-                    detailmodal.querySelector('h5').innerText = `${item} - ${characterdata[index].name}`;
-                    detailmodal.querySelector('#lolImage').setAttribute('src', `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item}_1.jpg`);
-                    detailmodal.querySelector('#description').innerText = `${characterdata[index].blurb}`;
-                    detailmodal.querySelector('#chrinf').innerHTML = `HP：${characterdata[index].stats.hp} <br>Move Speed：${characterdata[index].stats.movespeed}<br>Armor：${characterdata[index].stats.armor}<br>Spell Block：${characterdata[index].stats.spellblock}<br>AttackRange：${characterdata[index].stats.attackrange}<br>`;
-                };
-
-                cloneConetent.querySelector('.video').onclick = function () {
-                    let videomodal = document.querySelector('#videoModal')
-                    videomodal.querySelector('#iframe').setAttribute('src', 'https://www.youtube.com/embed/-86LXC0c2zw');
-                    videomodal.querySelector('h5').innerText = `${item}'s Video`;
-
-                    document.querySelector('#videobtnclose').onclick = function () {
-                        videomodal.querySelector('#iframe').removeAttribute('src');
+                    cloneConetent.querySelector('.detail').onclick = function () {
+                        let detailmodal = document.querySelector('#detailModal')
+                        detailmodal.querySelector('h5').innerText = `${item} - ${characterdata[index].name}`;
+                        detailmodal.querySelector('#lolImage').setAttribute('src', `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item}_1.jpg`);
+                        detailmodal.querySelector('#description').innerText = `${characterdata[index].blurb}`;
+                        detailmodal.querySelector('#chrinf').innerHTML = `HP：${characterdata[index].stats.hp} <br>Move Speed：${characterdata[index].stats.movespeed}<br>Armor：${characterdata[index].stats.armor}<br>Spell Block：${characterdata[index].stats.spellblock}<br>AttackRange：${characterdata[index].stats.attackrange}<br>`;
                     };
-                };
-                row.append(cloneConetent);
+
+                    cloneConetent.querySelector('.video').onclick = function () {
+                        let videomodal = document.querySelector('#videoModal')
+                        videomodal.querySelector('#iframe').setAttribute('src', 'https://www.youtube.com/embed/-86LXC0c2zw');
+                        videomodal.querySelector('h5').innerText = `${item}'s Video`;
+
+                        document.querySelector('#videobtnclose').onclick = function () {
+                            videomodal.querySelector('#iframe').removeAttribute('src');
+                        };
+                    };
+                    row.append(cloneConetent);
+                });
             });
-            });           
         }
         xhr.open('GET', url);
         xhr.send();
