@@ -73,7 +73,11 @@
             margin: 15px;
             text-align: center;
             color: rgb(67, 67, 71);
-            font-size: 20px;
+            font-size: 18px;
+        }
+        .colorbtnstyle:focus,
+        .storgebtnstyle:focus{
+            border:3px solid rgb(122, 155, 192) ;
         }
     </style>
 </head>
@@ -206,9 +210,8 @@
                     button.innerText = `${colorItem[index].color}`;
                     colorzone.append(button);
                     let colorcircle = document.createElement('div')
-                    colorcircle.setAttribute('style', `background-color:${colorItem[index].colorValue};width:50px;height:50px;border-radius: 50%;margin:5px auto 0 auto;`)
+                    colorcircle.setAttribute('style', `background-color:${colorItem[index].colorValue};width:40px;height:40px;border-radius: 50%;margin:5px auto 0 auto;`)
                     button.appendChild(colorcircle);
-                    console.log(colorItem[index].imageUrl);
                 });
                 let allcolorbtn = document.querySelectorAll('.colorbtnstyle');
                 for (let i = 0; i < allcolorbtn.length; i++) {
