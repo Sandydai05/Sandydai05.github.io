@@ -179,9 +179,6 @@
         let ipadArray = [];
         let colorImg = ['https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-spacegray-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650646000', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-silver-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650645000', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-gold-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650644000', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-green-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650644000', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-blue-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650644000'];
 
-        console.log(colorImg[1])
-
-
         window.onload = function () {
             //Axios
             axios.get('https://raw.githubusercontent.com/Sandydai05/FileStorage/main/AppleProductData.json')
@@ -277,7 +274,7 @@
             if (_color != '外觀' && _storage != '儲存裝置' && _network != '連線能力') {
                 console.log(ipadArray);
                 let newArray = ipadArray[0].modeldata;
-                let filiterArray = newArray.filter(x =>x.storage == _storage.trim() && x.color == _color.trim() &&x.network == _network.trim());
+                let filiterArray = newArray.filter(x =>x.storage == _storage.trim() && x.color == _color.trim() && x.network == _network.trim());
                 priceshow.innerText = `$ ${filiterArray[0].price}`;
             }
 
