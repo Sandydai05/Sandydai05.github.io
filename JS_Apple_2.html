@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://developer.apple.com/favicon.ico" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Apple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    nav {
+        border-bottom: 1px solid #00000029;
+        background-color: rgb(243, 242, 242);
+    }
+
+    .colorselect,
+    .storageselect,
+    .networkselect {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    .colorbtn,
+    .storagebtn,
+    .networkbtn {
+        color: rgb(39, 37, 33);
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: 1px solid;
+        cursor: pointer;
+        overflow: hidden;
+        width: 180px;
+        height: 100px;
+        border: 1px solid #6c757d;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    .firstp::after,
+    .firstwifip::after {
+        content: 'NT$18,900起';
+        font-size: 12px;
+        color: rgb(112, 108, 108);
+        display: block;
+    }
+
+    .lastp::after {
+        content: 'NT$23,900起';
+        font-size: 12px;
+        color: rgb(112, 108, 108);
+        display: block;
+    }
+
+    .lastwifip::after {
+        content: 'NT$23,200起';
+        font-size: 12px;
+        color: rgb(112, 108, 108);
+        display: block;
+    }
+
+    button div {
+        width: 30px;
+        height: 30px;
+        margin: auto;
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+
+    button p {
+        margin-top: 5px;
+        color: black;
+        font-size: 16px;
+    }
+
+    #change {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        color: #0c63e4;
+        margin-left: 350px;
+        margin-top: -50px;
+        display: none;
+    }
+
+    button:focus {
+        border: 4px solid rgb(122, 155, 192);
+    }
+    .priceshow{
+        font-size: 25px;
+    }
+</style>
+
+<body>
+
+    <head>
+        <nav class="navbar navbar-light">
+            <div class="container">
+                <a class="navbar-brand fs-4" href="#">iPad Air</a>
+                <span>NT$18,900 起</span>
+            </div>
+        </nav>
+    </head>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 imgShow"></div>
+            <div class="col-12 col-md-6">
+                <p class="fs-2 mt-3">購買 iPad Air</p>
+                <p class="fs-6 mt-3 colorshow">外觀</p>
+                <button id="change">更改</button>
+                <div class="col-12 col-md-3 colorselect">
+                    <button class="colorbtn">
+                        <div style="background-color:#dee1df;"></div>
+                        <p>太空灰色</p>
+                    </button>
+                    <button class="colorbtn">
+                        <div style="background-color:#afb1b4;"></div>
+                        <p>銀色</p>
+                    </button>
+                    <button class="colorbtn">
+                        <div style="background-color:#eac9c2;"></div>
+                        <p>玫瑰金色</p>
+                    </button>
+                    <button class="colorbtn">
+                        <div style="background-color:#cbdcc9;"></div>
+                        <p>綠色</p>
+                    </button>
+                    <button class="colorbtn">
+                        <div style="background-color:#c9d9e5;"></div>
+                        <p>天藍色</p>
+                    </button>
+                </div>
+                <p class="fs-6 mt-3 storageshow">儲存裝置</p>
+                <button id="change">更改</button>
+                <div class="col-12 col-md-3 storageselect">
+                    <button class="storagebtn">
+                        <p class="fs-5 firstp">64GB</p>
+                    </button>
+                    <button class="storagebtn">
+                        <p class="fs-5 lastp">256GB</p>
+                    </button>
+                </div>
+                <p class="fs-6 mt-3 networkshow">連線能力</p>
+                <button id="change">更改</button>
+                <div class="col-12 col-md-3 networkselect">
+                    <button class="networkbtn">
+                        <p class="fs-5 firstwifip">Wi-Fi</p>
+                    </button>
+                    <button class="networkbtn">
+                        <p class="fs-5 lastwifip">Wi-Fi+行動網路</p>
+                    </button>
+                </div>
+                <div class="col-12 col-md-3 priceshow mt-3"></div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <!-- Axios函示庫 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        let ipadArray = [];
+        let colorImg = ['https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-spacegray-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650646000', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-silver-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650645000', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-gold-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650644000', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-green-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650644000', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-blue-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650644000'];
+
+        console.log(colorImg[1])
+
+
+        window.onload = function () {
+            //Axios
+            axios.get('https://raw.githubusercontent.com/Sandydai05/FileStorage/main/AppleProductData.json')
+                .then(res => {
+                    ipadArray = res.data;
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+
+            findIpads();
+            findImg();
+        }
+
+
+
+        let colorbtn = document.querySelectorAll('.colorbtn');
+        let colorselect = document.querySelector('.colorselect');
+        let colorshow = document.querySelector('.colorshow');
+        let changebtn = document.querySelectorAll('#change');
+        let storagebtn = document.querySelectorAll('.storagebtn');
+        let storageshow = document.querySelector('.storageshow');
+        let storageselect = document.querySelector('.storageselect');
+        let networkshow = document.querySelector('.networkshow');
+        let networkselect = document.querySelector('.networkselect');
+        let networkbtn = document.querySelectorAll('.networkbtn');
+        let imgShow = document.querySelector('.imgShow');
+        let priceshow = document.querySelector('.priceshow');
+
+
+        colorbtn.forEach(function (item, index) {
+            colorbtn[index].addEventListener('click', function () {
+                colorselect.style.display = 'none';
+                colorshow.innerText = colorbtn[index].innerText;
+                colorshow.setAttribute('style', 'margin-top:-80px !important;font-size:25px !important;border-bottom: 1px solid rgb(199, 198, 198) !important;padding-bottom:10px');
+                changebtn[0].style.display = 'block';
+                let img = document.createElement('img');
+                img.setAttribute('src', `${colorImg[index]}`);
+                imgShow.appendChild(img);
+                findIpads();
+            });
+        });
+
+        storagebtn.forEach(function (item, index) {
+            storagebtn[index].addEventListener('click', function () {
+                storageselect.style.display = 'none';
+                storageshow.innerText = storagebtn[index].innerText;
+                storageshow.setAttribute('style', 'margin-top:-20px !important;font-size:25px !important;border-bottom: 1px solid rgb(199, 198, 198) !important;padding-bottom:10px');
+                changebtn[1].style.display = 'block';
+                findIpads();
+            })
+        })
+
+        networkbtn.forEach(function (item, index) {
+            networkbtn[index].addEventListener('click', function () {
+                networkselect.style.display = 'none';
+                networkshow.innerText = networkbtn[index].innerText;
+                networkshow.setAttribute('style', 'margin-top:-20px !important;font-size:25px !important;border-bottom: 1px solid rgb(199, 198, 198) !important;padding-bottom:10px');
+                changebtn[2].style.display = 'block';
+                findIpads();
+            })
+        })
+
+        changebtn.forEach(function (item, index) {
+            changebtn[index].addEventListener('click', function () {
+                if (index == 0) {
+                    colorselect.style.display = 'block';
+                    colorshow.innerText = '外觀';
+                    colorshow.removeAttribute('style');
+                    changebtn[index].style.display = 'none';
+                    imgShow.innerHTML = "";
+                }
+                else if (index == 1) {
+                    storageselect.style.display = 'block';
+                    storageshow.innerText = '儲存裝置';
+                    storageshow.removeAttribute('style');
+                    changebtn[index].style.display = 'none';
+                }
+                else if (index == 2) {
+                    networkselect.style.display = 'block';
+                    networkshow.innerText = '連線能力';
+                    networkshow.removeAttribute('style');
+                    changebtn[index].style.display = 'none';
+                }
+            })
+        })
+
+        function findIpads() {
+            _color = colorshow.innerText;
+            _storage = storageshow.innerText;
+            _network = networkshow.innerText;
+            if (_color != '外觀' && _storage != '儲存裝置' && _network != '連線能力') {
+                console.log(ipadArray);
+                let newArray = ipadArray[0].modeldata;
+                let filiterArray = newArray.filter(x =>x.storage == _storage.trim() && x.color == _color.trim() &&x.network == _network.trim());
+                priceshow.innerText = `$ ${filiterArray[0].price}`;
+            }
+
+        }
+
+        function findImg(){
+            let img = document.createElement('img');
+                img.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-202009?wid=443&hei=535&fmt=jpeg&qlt=95&.v=1599066777000');
+                imgShow.appendChild(img);
+        }
+    </script>
+</body>
+
+</html>
