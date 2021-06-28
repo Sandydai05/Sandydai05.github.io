@@ -211,6 +211,7 @@
 
         colorbtn.forEach(function (item, index) {
             colorbtn[index].addEventListener('click', function () {
+                imgShow.innerHTML = "";
                 colorselect.style.display = 'none';
                 colorshow.innerText = colorbtn[index].innerText;
                 colorshow.setAttribute('style', 'margin-top:-80px !important;font-size:25px !important;border-bottom: 1px solid rgb(199, 198, 198) !important;padding-bottom:10px');
@@ -250,7 +251,7 @@
                     colorshow.innerText = '外觀';
                     colorshow.removeAttribute('style');
                     changebtn[index].style.display = 'none';
-                    imgShow.innerHTML = "";
+                    
                 }
                 else if (index == 1) {
                     storageselect.style.display = 'block';
