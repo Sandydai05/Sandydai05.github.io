@@ -154,9 +154,12 @@
 
         .start {
             background-color: rgb(194, 194, 206);
+            display: inline-block;
             width: 230px;
             height: 40px;
-            margin: 10px auto 0 auto;
+            padding-bottom: 40px;
+            margin-top: -5px;
+            margin-left: 70px;
             color: black;
             font-weight: bolder;
             background-repeat: no-repeat;
@@ -182,7 +185,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
 
-    <div class="container">
+    <div class="container mt-2">
         <div class="row">
             <div box-id="1" class="col-1"></div>
             <div box-id="2" class="col-1"></div>
@@ -272,6 +275,9 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
+                <div class="">
+                    <button type="button" class="btn start fs-4">今晚，我想來點...</button>
+                </div>
             </div>
             <div box-id="15" class="col-1"></div>
         </div>
@@ -296,9 +302,6 @@
             <div box-id="18" class="col-1"></div>
             <div box-id="17" class="col-1"></div>
         </div>
-        <div class="row">
-            <button type="button" class="btn start fs-4">今晚，我想來點...</button>
-        </div>
     </div>
 
 
@@ -309,288 +312,192 @@
                 color: 'white',
                 text: 'START',
                 bgcolor: 'rgb(80, 109, 189)',
-                target: function () {
-                    return this.icon.split('-')[1]; //用this取最近的物件就是自己，用-符號分隔取第二個字就是"instagram"
-                }
             },
             {
                 id: '2',
                 color: 'black',
                 text: '綠咖哩椰汁雞',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '3',
                 color: 'black',
                 text: '大腸麵線不加香菜',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '4',
                 color: 'black',
                 text: '鐵觀音奶茶半糖少冰',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '5',
                 color: 'black',
                 text: '紅油炒手',
                 bgcolor: 'rgb(216, 143, 83)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '6',
                 color: 'black',
                 text: '勁辣雞腿堡配薯條可樂',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '7',
                 color: 'black',
                 text: '起司牛肉可頌',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '8',
                 color: 'black',
                 text: '韓式辣味鍋貼配酸辣湯',
                 bgcolor: 'rgb(216, 143, 83)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '9',
                 color: 'black',
                 text: '鮮牛肉河粉加香菜',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '10',
                 color: 'black',
                 text: '海南雞腿飯',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '11',
                 color: 'black',
                 text: '白玉歐蕾去冰',
                 bgcolor: 'rgb(216, 143, 83)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '12',
                 color: 'black',
                 text: '半筋半肉牛肉麵',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '13',
                 color: 'black',
                 text: '鮪魚潛艇堡配沙拉',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '14',
                 color: 'black',
                 text: '小籠包佐薑絲米醋',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '15',
                 color: 'black',
                 text: '骰子牛',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '16',
                 color: 'black',
                 text: '黑糖珍珠鮮奶',
                 bgcolor: 'rgb(216, 143, 83)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '17',
                 color: 'black',
                 text: '牛奶風味泡麵',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '18',
                 color: 'black',
                 text: '泰式酸辣海鮮麵',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '19',
                 color: 'black',
                 text: '烤全雞',
                 bgcolor: 'rgb(216, 143, 83)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '20',
                 color: 'black',
                 text: '港式燒賣',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '21',
                 color: 'black',
                 text: '四季珍椰青無糖去冰',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '22',
                 color: 'black',
                 text: '客家乾板條',
                 bgcolor: 'rgb(216, 143, 83)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '23',
                 color: 'black',
                 text: '越式酸辣米線',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '24',
                 color: 'black',
                 text: '奶油蛤蠣義大利麵',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '25',
                 color: 'black',
                 text: '青醬雞肉燉飯',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '26',
                 color: 'black',
                 text: '番茄肉醬筆管麵',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '27',
                 color: 'black',
                 text: '章魚燒PIZZA',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '28',
                 color: 'black',
                 text: '厚切牛排配玉米濃湯',
                 bgcolor: 'rgb(216, 143, 83)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '29',
                 color: 'black',
                 text: '蝦仁腸粉',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '30',
                 color: 'black',
                 text: '魷魚羹麵不加醋加蒜泥',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '31',
                 color: 'black',
                 text: '木瓜牛奶去糖去冰',
                 bgcolor: 'rgb(216, 143, 83)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             },
             {
                 id: '32',
                 color: 'black',
                 text: '波霸奶茶全糖正常冰',
                 bgcolor: 'rgb(238, 215, 131)',
-                target: function () {
-                    return this.icon.split('-')[1];
-                }
             }
         ]
 
@@ -615,7 +522,6 @@
 
 
         selectstep.addEventListener('change', function () {
-            console.log(this.value);
             if (this.value != -1) {
                 button.disabled = false;
             }
