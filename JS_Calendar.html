@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap" rel="stylesheet">
+
+    <title>Calendar</title>
+    <style>
+        * {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: cornsilk;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        button {
+            width: 75px;
+            cursor: pointer;
+            box-shadow: 0 0 2px gray;
+            border: none;
+            outline: none;
+            padding: 5px;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+        }
+
+        #header {
+            padding: 10px;
+            color: #cf5f5f;
+            font-size: 32px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #header button {
+            background-color: #92A1D1;
+        }
+
+        #container {
+            width: 980px;
+        }
+
+        #weekdays {
+            width: 100%;
+            display: flex;
+            color: #212529;
+        }
+
+        #weekdays div {
+            width: 140px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        #calendar {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .day {
+            width: 130px;
+            height: 130px;
+            padding: 10px;
+            cursor: pointer;
+            box-sizing: border-box;
+            background-color: white;
+            margin: 5px;
+            box-shadow: 0 0 0 3px #CDB4C2;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .day::after {
+            content: '+';
+            font-size: 30px;
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+            display: none;
+        }
+
+        .day:hover {
+            background-color: rgba(243, 237, 149, 0.5);
+        }
+
+        .day:hover::after {
+            display: block;
+        }
+
+        .othermonth {
+            opacity: 0;
+        }
+
+        #newEventModal,
+        #editEventModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modalcontent {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+        }
+        .modalcontenttwo{
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+        }
+
+        #savebtn,
+        #deletebtn {
+            background-color: #92A1D1;
+            margin: 15px 0 0 0;
+        }
+
+        #editbtn {
+            margin: 15px 0 0 10px;
+            background-color: rgb(99, 93, 93);
+        }
+
+        #cancelbtn,
+        #closebtn {
+            background-color: #741f06;
+            margin: 15px 0 0 10px;
+        }
+
+        input {
+            display: block;
+        }
+
+        .event {
+            /* background-color: rgb(245, 163, 149); */
+            border-radius: 5px;
+            word-break: break-all;
+            margin: 2px 0;
+        }
+        .event:hover {
+            background-color: rgb(241, 173, 173);
+            transform: scale(1.1);
+        }
+
+        .today {
+            background-color: rgb(192, 189, 189);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="monthDisplay"></div>
+            <div>
+                <button id="back">Back</button>
+                <button id="next">Next</button>
+            </div>
+        </div>
+        <div id="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+        <div id="calendar"></div>
+    </div>
+
+    <div id="newEventModal">
+        <div class="modalcontent">
+            <h2>New Schedule</h2>
+            <p id="dateinf" class="fs-5"></p>
+            <input id="eventTitleInput" type="text" placeholder="Schedule Title">
+            <p>Background-Color<input id="bgcolor" type="color" class="d-inline mx-3 mt-3"></p>
+            <button id="savebtn">Save</button>
+            <button id="cancelbtn">Cancel</button>
+        </div>
+    </div>
+
+    <div id="editEventModal">
+        <div class="modalcontenttwo">
+            <h2>Check Schedule</h2>
+            <p id="dateinf2" class="fs-5"></p>
+            <input id="eventText" type="text"></input>
+            <p>Background-Color<input id="editbgcolor" type="color" class="d-inline mx-3 mt-3"></p>
+            <button id="deletebtn">Delete</button>
+            <button id="editbtn">Edit</button>
+            <button id="closebtn">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let changemonth = 0;
+        let clicked = null;
+        let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
+        const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        let calendar = document.querySelector('#calendar');
+        let newEventModal = document.querySelector('#newEventModal');
+        let editEventModal = document.querySelector('#editEventModal');
+        let dateinf = document.querySelector('#dateinf');
+        let dateinf2 = document.querySelector('#dateinf2');
+        let eventTitleInput = document.querySelector('#eventTitleInput');
+        let eventText = document.querySelector('#eventText');
+        let bgcolor = document.querySelector('#bgcolor');
+        let editbgcolor = document.querySelector('#editbgcolor');
+        let todaydata;
+        let textdata;
+
+
+        function load() {
+
+            let today = new Date();
+            if (changemonth != 0) {
+                today.setMonth(new Date().getMonth() + changemonth);
+            }
+
+            let day = today.getDate();
+            let month = today.getMonth();
+            let year = today.getFullYear();
+            let daysInMonth = new Date(year, month + 1, 0).getDate();
+            let firstDayOfMonth = new Date(year, month, 1);
+            let lastMonthDays = new Date(year, month, 1).getDay();
+
+            document.querySelector('#monthDisplay').innerText = `${today.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
+
+            calendar.innerHTML = '';
+
+            //make each day
+            for (let i = 1; i <= lastMonthDays + daysInMonth; i++) {
+                let daySquare = document.createElement('div');
+                daySquare.classList.add('day');
+
+                let dateData = `${year}/${month + 1}/${i - lastMonthDays}`;
+
+                if (i > lastMonthDays) {
+                    daySquare.innerText = i - lastMonthDays;
+                    let eventForDay = events.filter(e => e.date == dateData);
+
+                    //find today
+                    if (i - lastMonthDays == day && changemonth == 0) {
+                        daySquare.classList.add('today');
+                    }
+
+                    //show Schedule
+                    if (eventForDay) {
+                        for (let j = 0; j < eventForDay.length; j++) {
+                            let eventdetail = document.createElement('div')
+                            eventdetail.classList.add('event');
+                            eventdetail.innerText = `${eventForDay[j].title}`;
+                            eventdetail.style.backgroundColor = eventForDay[j].bgcolor;
+                            daySquare.appendChild(eventdetail);
+                        }
+                    }
+
+                    daySquare.addEventListener('click', function () {
+                        openEventModal(dateData);
+                        dateinf.innerText = `${dateData}`;
+                        dateinf2.innerText = `${dateData}`;
+                    })
+                }
+                else {
+                    daySquare.classList.add('othermonth');
+                }
+                calendar.appendChild(daySquare);
+            }
+            openEditModal();
+        }
+
+        //openmodal
+        function openEventModal(dateData) {
+            clicked = dateData;
+            newEventModal.style.display = 'block';
+        }
+
+        function openEditModal(){
+            let editevents = document.querySelectorAll('.event');
+            editevents.forEach(function(item,index){
+                editevents[index].addEventListener('click',function(e){
+                    eventText.value= editevents[index].innerText;
+                    editEventModal.style.display = 'block';
+                    newEventModal.style.display = 'none';
+                    // e.stopPropagation();
+                    textdata = events.find(x =>x.title == eventText.value);
+                    console.log(textdata);
+                })
+            })
+        }
+
+        //closemodal
+        function closeModal() {
+            newEventModal.style.display = 'none';
+            editEventModal.style.display = 'none';
+            eventTitleInput.value = '';
+            clicked = null;
+            load();
+        }
+
+        //savedata
+        function saveEvent() {
+            if (eventTitleInput.value != '') {
+                events.push({
+                    date: clicked,
+                    title: eventTitleInput.value,
+                    bgcolor:bgcolor.value,
+                })
+                localStorage.setItem('events', JSON.stringify(events));
+                closeModal();
+            }
+            else {
+                alert('Please enter your schedule');
+            }
+        }
+
+        //deletedata
+        function deleteEvent() {
+            // console.log(clicked);
+            // console.log(events);
+            events = events.filter(e => e.title != textdata.title);
+            localStorage.setItem('events', JSON.stringify(events));
+            closeModal();
+        }
+
+        //editdata
+        function editEvent() {
+            events = events.filter(e => e.title != textdata.title);
+            console.log(events);
+            localStorage.setItem('events', JSON.stringify(events));
+
+            events.push({
+                date: dateinf2.innerText,
+                title: eventText.value,
+                bgcolor:editbgcolor.value,
+            })
+            localStorage.setItem('events', JSON.stringify(events));
+            closeModal();
+        }
+
+        //all buttons addeventlistener
+        function initButtons() {
+            document.querySelector('#next').addEventListener('click', function () {
+                changemonth++
+                load();
+            })
+            document.querySelector('#back').addEventListener('click', function () {
+                changemonth--
+                load();
+            })
+
+            document.querySelector('#savebtn').addEventListener('click', saveEvent)
+            document.querySelector('#cancelbtn').addEventListener('click', closeModal);
+            document.querySelector('#deletebtn').addEventListener('click', deleteEvent);
+            document.querySelector('#closebtn').addEventListener('click', closeModal);
+            document.querySelector('#editbtn').addEventListener('click', editEvent);
+        }
+
+        initButtons();
+        load();
+    </script>
+</body>
+
+</html>
