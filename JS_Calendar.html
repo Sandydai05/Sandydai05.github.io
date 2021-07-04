@@ -302,7 +302,6 @@
                     daySquare.addEventListener('click', function () {
                         openEventModal(dateData);
                         dateinf.innerText = `${dateData}`;
-                        dateinf2.innerText = `${dateData}`;
                     })
                 }
                 else {
@@ -326,8 +325,9 @@
                     eventText.value= editevents[index].innerText;
                     editEventModal.style.display = 'block';
                     newEventModal.style.display = 'none';
-                    // e.stopPropagation();
+                    e.stopPropagation();
                     textdata = events.find(x =>x.title == eventText.value);
+                    dateinf2.innerText = textdata.date;
                     console.log(textdata);
                 })
             })
@@ -370,7 +370,7 @@
         //editdata
         function editEvent() {
             events = events.filter(e => e.title != textdata.title);
-            console.log(events);
+            // console.log(events);
             localStorage.setItem('events', JSON.stringify(events));
 
             events.push({
