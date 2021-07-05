@@ -155,13 +155,6 @@
             border: 1px solid #888;
             width: 30%;
         }
-        .modalcontenttwo{
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 30%;
-        }
 
         #savebtn,
         #deletebtn {
@@ -190,13 +183,18 @@
             word-break: break-all;
             margin: 2px 0;
         }
+
         .event:hover {
             background-color: rgb(241, 173, 173);
             transform: scale(1.1);
         }
 
         .today {
-            background-color: rgb(192, 189, 189);
+            background-color: rgb(221, 217, 217);
+        }
+
+        .spandate {
+            display: none;
         }
     </style>
 </head>
@@ -234,7 +232,7 @@
     </div>
 
     <div id="editEventModal">
-        <div class="modalcontenttwo">
+        <div class="modalcontent">
             <h2>Check Schedule</h2>
             <p id="dateinf2" class="fs-5"></p>
             <input id="eventText" type="text"></input>
@@ -296,7 +294,6 @@
                 if (i > lastMonthDays) {
                     daySquare.innerText = i - lastMonthDays;
                     let eventForDay = events.filter(e => e.date == dateData);
-
                     //find today
                     if (i - lastMonthDays == day && changemonth == 0) {
                         daySquare.classList.add('today');
@@ -307,9 +304,13 @@
                         for (let j = 0; j < eventForDay.length; j++) {
                             let eventdetail = document.createElement('div')
                             eventdetail.classList.add('event');
-                            eventdetail.innerText = `${eventForDay[j].title}`;
+                            eventdetail.innerText = eventForDay[j].title;
+                            let spandate = document.createElement('span');
+                            spandate.innerText = eventForDay[j].date;
+                            spandate.classList.add('spandate');
                             eventdetail.style.backgroundColor = eventForDay[j].bgcolor;
                             daySquare.appendChild(eventdetail);
+                            eventdetail.appendChild(spandate);
                         }
                     }
 
@@ -319,7 +320,7 @@
                     })
                 }
                 else {
-                    daySquare.classList.replace('day','othermonth');
+                    daySquare.classList.replace('day', 'othermonth');
                 }
                 calendar.appendChild(daySquare);
             }
@@ -332,16 +333,16 @@
             newEventModal.style.display = 'block';
         }
 
-        function openEditModal(){
+        function openEditModal() {
             let editevents = document.querySelectorAll('.event');
-            editevents.forEach(function(item,index){
-                editevents[index].addEventListener('click',function(e){
-                    eventText.value= editevents[index].innerText;
+            let spandate = document.querySelectorAll('.spandate');
+            editevents.forEach(function (item, index) {
+                editevents[index].addEventListener('click', function (e) {
+                    eventText.value = editevents[index].innerText;
+                    dateinf2.innerText = spandate[index].innerText;
                     editEventModal.style.display = 'block';
-                    newEventModal.style.display = 'none';
                     e.stopPropagation();
-                    textdata = events.find(x =>x.title == eventText.value);
-                    dateinf2.innerText = textdata.date;
+                    textdata = events.find(x => x.title == eventText.value && x.date == dateinf2.innerText);
                     console.log(textdata);
                 })
             })
@@ -362,7 +363,7 @@
                 events.push({
                     date: clicked,
                     title: eventTitleInput.value,
-                    bgcolor:bgcolor.value,
+                    bgcolor: bgcolor.value,
                 })
                 localStorage.setItem('events', JSON.stringify(events));
                 closeModal();
@@ -376,21 +377,24 @@
         function deleteEvent() {
             // console.log(clicked);
             // console.log(events);
-            events = events.filter(e => e.title != textdata.title);
+            events = events.filter(e => e.title != textdata.title && e.date != textdata.date || e.title == textdata.title && e.date != textdata.date);
+            console.log(textdata.date);
+            console.log(events);
             localStorage.setItem('events', JSON.stringify(events));
             closeModal();
         }
 
         //editdata
         function editEvent() {
-            events = events.filter(e => e.title != textdata.title);
-            // console.log(events);
+            events = events.filter(e => e.title != textdata.title && e.date != textdata.date || e.title == textdata.title && e.date != textdata.date);
+            console.log(textdata.date);
+            console.log(events);
             localStorage.setItem('events', JSON.stringify(events));
 
             events.push({
                 date: dateinf2.innerText,
                 title: eventText.value,
-                bgcolor:editbgcolor.value,
+                bgcolor: editbgcolor.value,
             })
             localStorage.setItem('events', JSON.stringify(events));
             closeModal();
