@@ -181,14 +181,14 @@
         }
 
         .event {
-            /* background-color: rgb(245, 163, 149); */
+            /* background-color: #f5c3ba; */
             border-radius: 5px;
             word-break: break-all;
             margin: 2px 0;
         }
 
         .event:hover {
-            background-color: rgb(241, 173, 173);
+            background-color: #f1adad;
             transform: scale(1.1);
         }
 
@@ -228,7 +228,7 @@
             <h2>New Schedule</h2>
             <p id="dateinf" class="fs-5"></p>
             <input id="eventTitleInput" type="text" placeholder="Schedule Title">
-            <p>Background-Color<input id="bgcolor" type="color" class="d-inline mx-3 mt-3"></p>
+            <p>Background-Color<input id="bgcolor" type="color" class="d-inline mx-3 mt-3" value="#"></p>
             <button id="savebtn">Save</button>
             <button id="cancelbtn">Cancel</button>
         </div>
@@ -267,6 +267,7 @@
         let editbgcolor = document.querySelector('#editbgcolor');
         let todaydata;
         let textdata;
+        document.querySelectorAll('input[type="color"]')[0].value = '#f5c3ba'
 
 
         function load() {
@@ -344,8 +345,9 @@
                     eventText.value = editevents[index].innerText;
                     dateinf2.innerText = spandate[index].innerText;
                     editEventModal.style.display = 'block';
-                    e.stopPropagation();
                     textdata = events.find(x => x.title == eventText.value && x.date == dateinf2.innerText);
+                    document.querySelectorAll('input[type="color"]')[1].value = textdata.bgcolor;
+                    e.stopPropagation();
                     console.log(textdata);
                 })
             })
