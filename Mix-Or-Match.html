@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix-Or-Match</title>
+    <link rel="stylesheet" href="Mix-Or-Match.css">
+</head>
+
+<body>
+    <h1 class="page-title">Mix-Or-Match</h1>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id="victoty-text" class="overlay-text">
+        VICTORY
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Bat.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Bat.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Bones.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Bones.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Cauldron.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Cauldron.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Dracula.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Dracula.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Eye.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Eye.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Ghost.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Ghost.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Pumpkin.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Pumpkin.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Skull.png" class="card-value">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/Cobweb.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Spider.png" class="spider">
+            </div>
+            <div class="card-front card-face">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-top-right">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-left">
+                <img src="Asserts/Images/CobwebGrey.png" class="cob-web cob-web-bottom-right">
+                <img src="Asserts/Images/Skull.png" class="card-value">
+            </div>
+        </div>
+    </div>
+    <script>
+        class AudioController {
+            constructor() {
+                this.bgMusic = new Audio('Asserts/Audio/Assets_Audio_creepy.mp3');
+                this.flipSound = new Audio('Asserts/Audio/Assets_Audio_flip.wav');
+                this.matchSound = new Audio('Asserts/Audio/Assets_Audio_match.wav');
+                this.victorySound = new Audio('Asserts/Audio/Assets_Audio_victory.wav');
+                this.gameOverSound = new Audio('Asserts/Audio/Assets_Audio_gameover.wav');
+                this.bgMusic.volume = 0.3;
+                this.bgMusic.loop = true;
+            }
+            startMusic() {
+                this.bgMusic.play();
+            }
+            stopMusin() {
+                this.bgMusic.pause();
+                this.bgMusic.currentTime = 0;
+            }
+            flip() {
+                this.flipSound.play();
+            }
+            match() {
+                this.matchSound.play();
+            }
+            victory() {
+                this.stopMusin();
+                this.victorySound.play();
+            }
+            gameOver() {
+                this.stopMusin();
+                this.gameOverSound.play();
+            }
+        }
+
+        class MixOrMatch {
+            constructor(totalTime, cards) {
+                this.cardsArray = cards;
+                this.totalTime = totalTime;
+                this.timer = document.querySelector('#time-remaining');
+                this.ticker = document.querySelector('#flips');
+                this.audioController = new AudioController();
+            }
+            startGame() {
+                this.cardToCheck = null;
+                this.totalClicks = 0;
+                this.timeRemaining = this.totalTime;
+                this.matchedCardsArray = [];
+                this.busy = true;
+
+                setTimeout(() => {
+                    this.audioController.startMusic();
+                    this.shuffleCard();
+                    this.countDown = this.startCountDown();
+                    this.busy = false;
+                }, 500);
+                this.hideCards();
+                this.timer.innerText = this.timeRemaining;
+                this.ticker.innerText = this.totalClicks;
+            }
+            hideCards() {
+                this.cardsArray.forEach(function (card) {
+                    card.classList.remove('visible');
+                    card.classList.remove('matched');
+                });
+            }
+            flipCard(card) {
+                if (this.canFlipCard(card)) {
+                    this.audioController.flip();
+                    this.totalClicks++;
+                    this.ticker.innerText = this.totalClicks;
+                    card.classList.add('visible');
+
+                    if (this.cardToCheck) {
+                        this.checkForCardMatch(card)
+                    }
+                    else {
+                        this.cardToCheck = card;
+                    }
+                }
+            }
+
+            checkForCardMatch(card) {
+                if (this.getCardType(card) == this.getCardType(this.cardToCheck)) {
+                    //match
+                    this.cardMatch(card, this.cardToCheck);
+                }
+                else {
+                    this.cardMisMatch(card, this.cardToCheck);
+                }
+                this.cardToCheck = null;
+            }
+            cardMatch(card1, card2) {
+                this.matchedCardsArray.push(card1);
+                this.matchedCardsArray.push(card2);
+                card1.classList.add('matched');
+                card2.classList.add('matched');
+                setTimeout(()=>{
+                    this.audioController.match();
+                },400)
+                if (this.matchedCardsArray.length == this.cardsArray.length) {
+                    this.victory();
+                }
+            }
+            cardMisMatch(card1, card2) {
+                this.busy = true;
+                //don't want to flip them back instantly,give the viewer the person who's playing the game a good second to sort of let it sink into their brain.
+                setTimeout(() => {
+                    card1.classList.remove('visible');
+                    card2.classList.remove('visible');
+                    this.busy = false;
+                }, 1000)
+            }
+            getCardType(card) {
+                return card.querySelectorAll('.card-value')[0].src;
+            }
+
+            //扣秒數
+            startCountDown() {
+                return setInterval(() => {
+                    this.timeRemaining--;
+                    this.timer.innerText = this.timeRemaining;
+                    if (this.timeRemaining == 0) {
+                        this.gameOver();
+                    }
+                }, 1000)
+            }
+            gameOver() {
+                clearInterval(this.countDown);
+                this.audioController.gameOver();
+                document.querySelector('#game-over-text').classList.add('visible');
+                setTimeout(() =>{
+                    this.hideCards();
+                },1500)
+            }
+            victory() {
+                clearInterval(this.countDown);
+                this.audioController.victory();
+                document.querySelector('#victoty-text').classList.add('visible');
+                setTimeout(() =>{
+                    this.hideCards();
+                },1500)
+            }
+            shuffleCard() {
+                for (let i = this.cardsArray.length - 1; i > 0; i--) {
+                    let randIndex = Math.floor(Math.random() * (i + 1));
+
+                    //shuff特性，換位子，把抽中的放到最後一個index，就不會再被抽到，直到for跑完
+                    this.cardsArray[randIndex].style.order = i;
+                    this.cardsArray[i].style.order = randIndex; //原本這位子的值會往前搬
+
+                    console.log('shufflecard function');
+                }
+            }
+
+            canFlipCard(card) {
+                return (!this.busy && !this.matchedCardsArray.includes(card) && card != this.cardToCheck)
+            }
+        }
+
+        function ready() {
+            let overlays = document.querySelectorAll('.overlay-text');
+            let cards = document.querySelectorAll('.card');
+            let game = new MixOrMatch(100, cards);
+
+            overlays.forEach(function (overlay) {
+                overlay.addEventListener('click', function () {
+                    overlay.classList.remove('visible');
+
+                    game.startGame();
+                });
+            });
+            cards.forEach(function (card) {
+                card.addEventListener('click', function () {
+                    game.flipCard(card);
+                });
+            });
+        }
+
+        if (document.readyState == 'loading') {
+            document.addEventListener('DOMContentLoaded', ready());
+        }
+        else {
+            ready();
+        }
+    </script>
+</body>
+
+</html>
